@@ -15,15 +15,7 @@
 				<h4 class="card-title">Please fill in the form below</h4>
 			</div>
 			<div class="card-body">
-					<form action="/import-file" method="POST" enctype="multipart/form-data">
-						@csrf
-						<label for="file">Upload Excel File:</label>
-						<span class="d-flex">
-							<input class="form-control form-control-sm" type="file" name="file" accept=".xlsx,.xls,.csv">
-							<button class="btn btn-sm btn-success" type="submit">Import</button>
-						</span>
-						
-					</form>
+					
 				<div class="basic-form">
 					<br><br><br>
 

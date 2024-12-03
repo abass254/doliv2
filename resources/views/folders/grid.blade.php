@@ -121,6 +121,15 @@ $file = \App\Models\File::where('id', $id)->first();
         </div>
 
     </div><br><br>
+
+
+
+
+
+
+
+
+<div id="file-list"></div>
         
     <div class="row">
         <!-- <span id="refreshedData"> -->
@@ -240,5 +249,72 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+
+
+
+    const folderInput = document.getElementById("folderInput");
+
+    folderInput.addEventListener("change", (event) => {
+        handleFiles(event.target.files);
+    });
+
+    function allowDrop(event) {
+        event.preventDefault();
+    }
+
+    function handleDrop(event) {
+        event.preventDefault();
+        handleFiles(event.dataTransfer.files);
+    }
+
+    function handleFiles(files) {
+    const fileList = document.getElementById("file-list");
+    fileList.innerHTML = "";
+
+    const allowedExtensions = ['docx', 'pdf'];
+
+    // Filter allowed files
+    const validFiles = Array.from(files).filter(file => {
+        const extension = file.name.split('.').pop().toLowerCase();
+        return allowedExtensions.includes(extension);
+    });
+
+    if (validFiles.length < files.length) {
+        alert("Some files were excluded because they are not .docx or .pdf files.");
+    }
+
+    validFiles.forEach((file) => {
+        fileList.innerHTML += `<p>${file.webkitRelativePath}</p>`;
+    });
+
+    if (validFiles.length > 0) {
+        uploadFiles(validFiles);
+    }
+}
+
+
+    function uploadFiles(files) {
+        const formData = new FormData();
+
+        files.forEach((file) => {
+            formData.append("files[]", file);
+        });
+
+        fetch("{{ route('upload.folder') }}", {
+            method: "POST",
+            headers: {
+                "X-CSRF-TOKEN": "{{ csrf_token() }}",
+            },
+            body: formData,
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("Upload successful:", data);
+            })
+            .catch((error) => {
+                console.error("Upload failed:", error);
+            });
+    }
 </script>
 @endsection

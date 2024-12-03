@@ -11,7 +11,6 @@ class FilesSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    sudo apt install -y php php-cli php-fpm php-mysql php-xml php-mbstring php-bcmath php-json php-curl php-zip
     public function run(): void
     {
         //

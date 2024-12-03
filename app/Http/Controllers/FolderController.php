@@ -22,6 +22,90 @@ class FolderController extends Controller
 {
     //
 
+
+    public function uploadFolder(Request $request)
+{
+    // Validate uploaded files
+    $request->validate([
+        'files.*' => 'required|file|max:2048', // Ensure files are uploaded
+    ]);
+
+    // Initialize variables for folder mapping
+    $rootFolderName = null;
+    $folderMap = [];
+    $uploadPath = 'uploads'; // Storage location
+
+    foreach ($request->file('files') as $file) {
+        $relativePath = $file->getClientOriginalName(); // Includes folder structure
+        $pathParts = explode('/', $relativePath); // Split path into parts
+
+        // Check the file extension (skip if not .pdf or .docx)
+        $extension = strtolower($file->getClientOriginalExtension());
+        if (!in_array($extension, ['pdf', 'docx'])) {
+            continue; // Skip the file and continue with the next one
+        }
+
+        // Process each part of the path (subfolder structure)
+        foreach ($pathParts as $index => $part) {
+            // Check if this is the root folder
+            if ($index === 0 && !$rootFolderName) {
+                $rootFolderName = $part;
+
+                // Check if the root folder exists, otherwise create it
+                $rootFolder = Folder::firstOrCreate([
+                    'folder_name' => $rootFolderName,
+                    'primary_folder' => 0, // Root folder
+                    'file' => 1, // Constant value for folder
+                    'folder_status' => 1, // Active
+                    'folder_type' => 'folder',
+                ]);
+
+                $folderMap[$part] = $rootFolder->id; // Store root folder id
+            } elseif ($index === count($pathParts) - 1) {
+                // Handling the file (last part of the path)
+                $parentFolderId = $folderMap[$pathParts[$index - 1]] ?? null;
+
+                // Ensure parent folder exists for the file
+                if ($parentFolderId !== null) {
+                    Folder::create([
+                        'folder_name' => $part,
+                        'primary_folder' => $parentFolderId,
+                        'file' => 1, // Constant value for file
+                        'folder_status' => 1, // Active
+                        'folder_type' => 'file',
+                    ]);
+
+                    // Store the file in the appropriate folder
+                    $file->storeAs("$uploadPath/$rootFolderName", $relativePath);
+                }
+            } else {
+                // Handle folders
+                if (!isset($folderMap[$part])) {
+                    // Save the folder if it does not exist
+                    $parentFolderId = $folderMap[$pathParts[$index - 1]] ?? null;
+
+                    // Check if parent folder exists
+                    if ($parentFolderId !== null) {
+                        $folder = Folder::firstOrCreate([
+                            'folder_name' => $part,
+                            'primary_folder' => $parentFolderId,
+                            'file' => 1, // Constant value for folder
+                            'folder_status' => 1, // Active
+                            'folder_type' => 'folder',
+                        ]);
+                        $folderMap[$part] = $folder->id; // Store folder id
+                    }
+                }
+            }
+        }
+    }
+
+    return response()->json(['message' => 'Folder and files uploaded successfully.']);
+}
+
+
+    
+
     public function justTrial(Request $request, $id, $sub_id = null){
          // Check the route to determine the behavior
         // return Folder::all();

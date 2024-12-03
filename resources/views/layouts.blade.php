@@ -53,6 +53,20 @@
             opacity: 1;
         }
 
+        @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+        @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700");
+        @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+        @import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700");
+        @import url("{{ asset('icons/helveticaNeue/css/helveticaNeue.css') }}");
+        @import url("{{ asset('icons/fontawesome/css/all.min.css') }}");
+        @import url("{{ asset('icons/material-design-iconic-font/css/materialdesignicons.min.css') }}");
+        @import url("{{ asset('icons/themify-icons/css/themify-icons.css') }}");
+        @import url("{{ asset('icons/line-awesome/css/line-awesome.min.css') }}");
+        @import url("{{ asset('icons/flaticon/flaticon.css') }}");
+        @import url("{{ asset('vendor/animate/animate.min.css') }}");
+        @import url("{{ asset('vendor/metismenu/css/metisMenu.min.css') }}");
+
 
 
     </style>

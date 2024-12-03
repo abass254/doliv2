@@ -9,9 +9,7 @@ use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\DocumentCommentController;
 use App\Http\Controllers\FolderCommentController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 
 Route::get('/login', function () {
@@ -20,6 +18,9 @@ Route::get('/login', function () {
 
 Route::post('/login', [AccountController::class, 'login'])->name('login');
 
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Route::get('/files', function () {
 //     return view('cases.list');
@@ -72,6 +73,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/all_tasks', [TaskController::class, 'allTasks']);
     Route::get('/pending_tasks', [TaskController::class, 'pendingTasks']);
+
+    Route::post('/upload-folder', [FolderController::class, 'uploadFolder'])->name('upload.folder');
+
 
 });
 
