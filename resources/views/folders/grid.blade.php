@@ -43,7 +43,7 @@ $file = \App\Models\File::where('id', $id)->first();
             </a>
         </li>
         <li class="breadcrumb-item">
-            <a href="{{ url('/file_stations/'.$id.'/main') }}">
+            <a href="{{ url('/files_station/'.$id.'/main') }}">
                 <b class="text-primary">{{ $file->file_no }} </b>
             </a>
         </li>
@@ -109,7 +109,7 @@ $file = \App\Models\File::where('id', $id)->first();
                 <input hidden required type="text" id="folder_status" name="folder_status" value="1">
                 <input hidden required type="text" id="primary_folder" name="primary_folder" value="{{ $lastSegment }}">
                 <div class="input-group">
-                    <input multiple type="file" id="folder_name" name="folder_name[]" class="form-control form-control-sm" placeholder="Create New Folder" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <input multiple type="file" id="folder_name" name="folder_name[]" class="form-control form-control-sm" accept=".pdf,.docx" placeholder="Create New Folder" aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-primary btn-sm" id="" type="submit">UPLOAD</button>
                     </div>
