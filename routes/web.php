@@ -71,7 +71,7 @@ Route::middleware(['auth'])->group(function () {
     });
 
     
-    Route::get('/uploaded_file/{id}', [FolderController::class, 'viewFileAsPdf']);
+    Route::get('/uploaded_file/{id}', [FolderController::class, 'viewFileAsPdf'])->name('view_uploaded_file');
 
 
     Route::get('/my_tasks_board', [TaskController::class, 'myTasksBoard']);

@@ -143,12 +143,12 @@
 									<td class="py-2">
 										<p class="mb-0 text-left text-500">{{ $dt->client_address }}</p>
 									</td>
-									<td class="py-2 text-end">
-										<a href="{{ route('files.edit', $dt->id) }}" class="btn btn-danger btn-xs sharp">
-											<i class="fas fa-pencil-alt"></i>
+									<td class="py-2 d-flex">
+										<a href="{{ route('files.edit', $dt->id) }}" class="btn btn-danger btn-sm sharp m-1">
+											<b>EDIT</b>
 										</a>
-										<a href="files/{{ $dt->id }}" class="btn btn-primary btn-xs sharp"><b>
-										<i class="fa fa-eye"></i>
+										<a href="files/{{ $dt->id }}" class="btn btn-primary btn-sm sharp m-1"><b>
+										VIEW
 										</b></a>
 									</td>
 								</tr>

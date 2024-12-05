@@ -339,7 +339,7 @@
                                                     <div class="new-arrival-content text-center mt-3">
                                                         <p class="text-capitalize text-truncate" title="{{ $fl->folder_name }}">{{ $fl->folder_name }}</p>
                                                         <span class="price">
-                                                            <a href="/uploaded_file/{{ $fl->id }}" 
+                                                            <a href=" {{ route('view_uploaded_file', $fl->id) }}" 
                                                             class="btn btn-sm btn-block btn-danger">VIEW</a>
                                                         </span>
                                                     </div>

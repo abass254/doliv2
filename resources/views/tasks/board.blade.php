@@ -43,13 +43,13 @@ $file = App\Models\File::all();
                             <input type="text" hidden name="ts_user" value="{{ Auth::user()->id }}">
                             <div class="col-sm-12 mb-3">
                                 <label  class="form-label">DATE</label>
-                                <input type="date" name="ts_date" class="form-control" value="{{ Carbon\Carbon::now()->format('d/m/Y') }}"></div>
+                                <input type="date" name="ts_date" class="form-control form-control-sm" value="{{ Carbon\Carbon::now()->format('d/m/Y') }}"></div>
                             <div class="col-sm-12 mb-3">
                                 <label class="form-label">ACTIVITY</label>
-                                <textarea rows="5" name="ts_activity" class="form-control" id=""></textarea></div>
+                                <textarea rows="5" name="ts_activity" class="form-control form-control-sm" id=""></textarea></div>
                             <div class="col-sm-12 mb-3" id="file_no">
                                 <label class="form-label">FILE NO</label>
-                                <select name="ts_file" class="form-control searchabl" name="">
+                                <select name="ts_file" class="form-control form-control-sm searchabl" name="">
                                     <option value=""></option>
                                     @foreach($file as $fl)
                                         <option value="{{ $fl->id }}">{{ $fl->file_no }}</option>

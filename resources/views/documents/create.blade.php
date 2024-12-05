@@ -2,6 +2,14 @@
 
 @section('page-title', 'Create Document')
 
+
+
+@php 
+
+$files = \App\Models\File::all();
+
+@endphp
+
 @section('content')
 <style>
     .ck-editor__editable {
@@ -31,12 +39,22 @@
                     @endif
                 </div>
                 @csrf		
-                <input hidden value="1" name="file_no" type="text">	
+                <input hidden value="1" name="fil00e_no" type="text">	
                 <input hidden value="{{ Auth::user()->id }}" name="creater" type="text">	
+                <span class="d-flex">
+                    <div class="m-3">
+                        <input type="text" style="width:700px;" name="title" class="form-control" placeholder="Title">
+                    </div>
+                    <div class="m-3">
+                        <select required name="file_no" style="width:400px;" class="form-control" id="">SELECT CASE FILE NO
+                            <option selected disabled value="">SELECT CASE FILE NO</option>
+                            @foreach($files as $fl)
+                                <option value="{{ $fl->id }}">{{ $fl->file_no }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </span>
                 
-                <div class="m-3">
-                    <input type="text" name="title" class="form-control" placeholder="Title">
-                </div>
                 <div class="m-3 dz-scroll height360"  style="height:900px">
                     <textarea class="large-textarea" placeholder="Content" id="editor" name="content" rows="10" cols="50"></textarea>
                 </div>

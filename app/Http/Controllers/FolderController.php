@@ -191,8 +191,6 @@ class FolderController extends Controller
 
        // return $fileExtension;
         if (file_exists($filePath)) {
-            // Check file extension and pass the appropriate path
-           // return 'File exists';
             $fileExtension = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
     
             return view('folders.view_file', compact('filePath', 'fileExtension', 'fileName', 'document'));
