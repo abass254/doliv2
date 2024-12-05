@@ -8,6 +8,7 @@ use App\Http\Controllers\TaskController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\DocumentCommentController;
 use App\Http\Controllers\FolderCommentController;
+use App\Http\Controllers\TestController;
 
 
 
@@ -19,7 +20,7 @@ Route::get('/login', function () {
 Route::post('/login', [AccountController::class, 'login'])->name('login');
 
 Route::get('/', function () {
-    return view('welcome');
+    return App\Models\Folder::latest()->take(5)->get();
 });
 
 // Route::get('/files', function () {
@@ -30,6 +31,7 @@ Route::get('/', function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [AccountController::class, 'homePage']); 
     Route::post('/logout', [AccountController::class, 'logout'])->name('logout');
+    Route::post('/change-password', [AccountController::class, 'changePassword'])->name('password.update');
 
 
 
@@ -39,6 +41,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/files_station', [FolderController::class, 'getAllFiles']);
     Route::get('/files_station/{id}/main', [FolderController::class, 'justTrial']);
     Route::get('/files_station/{id}/folder/{sub_id}', [FolderController::class, 'justTrial'])->name('file_stations.show');
+
+    Route::get('/folder-upload', [TestController::class, 'uploadForm'])->name('folder.upload.form');
+    Route::post('/process-folder', [TestController::class, 'processZip'])->name('folder.process');
 
 
     Route::post('/uploadFile', [FolderController::class, 'uploadFiles'])->name('upload-files');
@@ -76,6 +81,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/upload-folder', [FolderController::class, 'uploadFolder'])->name('upload.folder');
 
+    Route::get('/filerrrr', [TestController::class, 'show'])->name('file.show');
 
 });
 

@@ -14,7 +14,8 @@ class Folder extends Model
         'folder_name',
         'primary_folder',
         'folder_status',
-        'folder_type'
+        'folder_type',
+        'folder_path',
     ];
 
 

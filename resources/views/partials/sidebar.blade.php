@@ -22,11 +22,13 @@
                     <span class="nav-text">Home Page</span>
                 </a>
             </li>
+            @if(Auth::user()->role == "System Administrator")
             <li><a href="/system-dashboard" class="ai-icon" aria-expanded="false">
                     <i class="fa fa-line-chart"></i>
                     <span class="nav-text">System Dashboard</span>
                 </a>
             </li>
+            
             <li><a href="/system_users" class="ai-icon" aria-expanded="false">
                     <i class="fa fa-users"></i>
                     <span class="nav-text">System Users</span>
@@ -37,6 +39,7 @@
                     <span class="nav-text">Create Users</span>
                 </a>
             </li>
+            @endif
             <li><a href="/my_tasks_board" class="ai-icon" aria-expanded="false">
                     <i class="fa fa-clock"></i>
                     <span class="nav-text">My Tasks Board</span>

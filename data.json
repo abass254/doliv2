@@ -1,0 +1,889 @@
+
+    [
+    {"name": "fastapi/", "path": "./fastapi/", "type": "d"},
+    {"name": "frontend", "path": "./fastapi/frontend", "type": "d"},
+    {"name": "data.html", "path": "./fastapi/frontend/data.html", "type": "f"},
+    {"name": "style.css", "path": "./fastapi/frontend/style.css", "type": "f"},
+    {"name": "app.js", "path": "./fastapi/frontend/app.js", "type": "f"},
+    {"name": "index.html", "path": "./fastapi/frontend/index.html", "type": "f"},
+    {"name": "app", "path": "./fastapi/app", "type": "d"},
+    {"name": "__init__.py", "path": "./fastapi/app/__init__.py", "type": "f"},
+    {"name": "crud.py", "path": "./fastapi/app/crud.py", "type": "f"},
+    {"name": "__pycache__", "path": "./fastapi/app/__pycache__", "type": "d"},
+    {"name": "__init__.cpython-312.pyc", "path": "./fastapi/app/__pycache__/__init__.cpython-312.pyc", "type": "f"},
+    {"name": "crud.cpython-312.pyc", "path": "./fastapi/app/__pycache__/crud.cpython-312.pyc", "type": "f"},
+    {"name": "models.cpython-312.pyc", "path": "./fastapi/app/__pycache__/models.cpython-312.pyc", "type": "f"},
+    {"name": "database.cpython-312.pyc", "path": "./fastapi/app/__pycache__/database.cpython-312.pyc", "type": "f"},
+    {"name": "schemas.cpython-312.pyc", "path": "./fastapi/app/__pycache__/schemas.cpython-312.pyc", "type": "f"},
+    {"name": "main.cpython-312.pyc", "path": "./fastapi/app/__pycache__/main.cpython-312.pyc", "type": "f"},
+    {"name": "models.py", "path": "./fastapi/app/models.py", "type": "f"},
+    {"name": "schemas.py", "path": "./fastapi/app/schemas.py", "type": "f"},
+    {"name": "main.py", "path": "./fastapi/app/main.py", "type": "f"},
+    {"name": "database.py", "path": "./fastapi/app/database.py", "type": "f"},
+    {"name": "test.db", "path": "./fastapi/test.db", "type": "f"},
+    {"name": "fastapi", "path": "./fastapi/", "type": "d", "primary_folder": "fastapi"},
+    {"name": "frontend", "path": "./fastapi/frontend", "type": "d", "primary_folder": "fastapi"},
+    {"name": "data.html", "path": "./fastapi/frontend/data.html", "type": "f", "primary_folder": "frontend"},
+    {"name": "style.css", "path": "./fastapi/frontend/style.css", "type": "f", "primary_folder": "frontend"},
+    {"name": "app.js", "path": "./fastapi/frontend/app.js", "type": "f", "primary_folder": "frontend"},
+    {"name": "index.html", "path": "./fastapi/frontend/index.html", "type": "f", "primary_folder": "frontend"},
+    {"name": "app", "path": "./fastapi/app", "type": "d", "primary_folder": "fastapi"},
+    {"name": "__init__.py", "path": "./fastapi/app/__init__.py", "type": "f", "primary_folder": "app"},
+    {"name": "crud.py", "path": "./fastapi/app/crud.py", "type": "f", "primary_folder": "app"},
+    {"name": "__pycache__", "path": "./fastapi/app/__pycache__", "type": "d", "primary_folder": "app"},
+    {"name": "__init__.cpython-312.pyc", "path": "./fastapi/app/__pycache__/__init__.cpython-312.pyc", "type": "f", "primary_folder": "__pycache__"},
+    {"name": "crud.cpython-312.pyc", "path": "./fastapi/app/__pycache__/crud.cpython-312.pyc", "type": "f", "primary_folder": "__pycache__"},
+    {"name": "models.cpython-312.pyc", "path": "./fastapi/app/__pycache__/models.cpython-312.pyc", "type": "f", "primary_folder": "__pycache__"},
+    {"name": "database.cpython-312.pyc", "path": "./fastapi/app/__pycache__/database.cpython-312.pyc", "type": "f", "primary_folder": "__pycache__"},
+    {"name": "schemas.cpython-312.pyc", "path": "./fastapi/app/__pycache__/schemas.cpython-312.pyc", "type": "f", "primary_folder": "__pycache__"},
+    {"name": "main.cpython-312.pyc", "path": "./fastapi/app/__pycache__/main.cpython-312.pyc", "type": "f", "primary_folder": "__pycache__"},
+    {"name": "models.py", "path": "./fastapi/app/models.py", "type": "f", "primary_folder": "app"},
+    {"name": "schemas.py", "path": "./fastapi/app/schemas.py", "type": "f", "primary_folder": "app"},
+    {"name": "main.py", "path": "./fastapi/app/main.py", "type": "f", "primary_folder": "app"},
+    {"name": "database.py", "path": "./fastapi/app/database.py", "type": "f", "primary_folder": "app"},
+    {"name": "test.db", "path": "./fastapi/test.db", "type": "f", "primary_folder": "fastapi"}
+    ]
+
+
+    [
+        {
+            "name":  "AB FILE",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB FILE",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR"
+        },
+        {
+            "name":  "AB951- FADUMO ABUKAR - file moved here Mar 21 2024",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR"
+        },
+        {
+            "name":  "CLIENT\u0027S INFO",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\CLIENT\u0027S INFO",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR"
+        },
+        {
+            "name":  "disbursement",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\disbursement",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR"
+        },
+        {
+            "name":  "EXPENSES \u0026 INVOICES",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\EXPENSES \u0026 INVOICES",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR"
+        },
+        {
+            "name":  "INSURANCE CORR",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\INSURANCE CORR",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR"
+        },
+        {
+            "name":  "IEs",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\IEs",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR"
+        },
+        {
+            "name":  "MEDICALS",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\MEDICALS",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR"
+        },
+        {
+            "name":  "MVA",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\MVA",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR"
+        },
+        {
+            "name":  "New folder",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\New folder",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR"
+        },
+        {
+            "name":  "OCF-S",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OCF-S",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR"
+        },
+        {
+            "name":  "OUR CORR",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR"
+        },
+        {
+            "name":  "PHYSIO",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR"
+        },
+        {
+            "name":  "DOCKETS-ABUKAR.xlsx",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\DOCKETS-ABUKAR.xlsx",
+            "type":  "f",
+            "primary_folder":  "AB951- FADUMO ABUKAR"
+        },
+        {
+            "name":  "CORRESPONDENCE.zip",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB FILE\\CORRESPONDENCE.zip",
+            "type":  "f",
+            "primary_folder":  "AB FILE"
+        },
+        {
+            "name":  "MEDICAL.zip",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB FILE\\MEDICAL.zip",
+            "type":  "f",
+            "primary_folder":  "AB FILE"
+        },
+        {
+            "name":  "fadumo abukar -section 33 -suspension Notice.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB FILE\\fadumo abukar -section 33 -suspension Notice.pdf",
+            "type":  "f",
+            "primary_folder":  "AB FILE"
+        },
+        {
+            "name":  "Payments made to date.png",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB FILE\\Payments made to date.png",
+            "type":  "f",
+            "primary_folder":  "AB FILE"
+        },
+        {
+            "name":  "AB FILE",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\AB FILE",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR - file moved here Mar 21 2024"
+        },
+        {
+            "name":  "disbursement",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\disbursement",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR - file moved here Mar 21 2024"
+        },
+        {
+            "name":  "CLIENT\u0027S INFO",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\CLIENT\u0027S INFO",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR - file moved here Mar 21 2024"
+        },
+        {
+            "name":  "EXPENSES \u0026 INVOICES",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\EXPENSES \u0026 INVOICES",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR - file moved here Mar 21 2024"
+        },
+        {
+            "name":  "IEs",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\IEs",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR - file moved here Mar 21 2024"
+        },
+        {
+            "name":  "MVA",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\MVA",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR - file moved here Mar 21 2024"
+        },
+        {
+            "name":  "MEDICALS",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\MEDICALS",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR - file moved here Mar 21 2024"
+        },
+        {
+            "name":  "INSURANCE CORR",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\INSURANCE CORR",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR - file moved here Mar 21 2024"
+        },
+        {
+            "name":  "New folder",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\New folder",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR - file moved here Mar 21 2024"
+        },
+        {
+            "name":  "OCF-S",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OCF-S",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR - file moved here Mar 21 2024"
+        },
+        {
+            "name":  "OUR CORR",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OUR CORR",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR - file moved here Mar 21 2024"
+        },
+        {
+            "name":  "PHYSIO",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO",
+            "type":  "d",
+            "primary_folder":  "AB951- FADUMO ABUKAR - file moved here Mar 21 2024"
+        },
+        {
+            "name":  "DOCKETS-ABUKAR.xlsx",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\DOCKETS-ABUKAR.xlsx",
+            "type":  "f",
+            "primary_folder":  "AB951- FADUMO ABUKAR - file moved here Mar 21 2024"
+        },
+        {
+            "name":  "CORRESPONDENCE.zip",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\AB FILE\\CORRESPONDENCE.zip",
+            "type":  "f",
+            "primary_folder":  "AB FILE"
+        },
+        {
+            "name":  "fadumo abukar -section 33 -suspension Notice.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\AB FILE\\fadumo abukar -section 33 -suspension Notice.pdf",
+            "type":  "f",
+            "primary_folder":  "AB FILE"
+        },
+        {
+            "name":  "MEDICAL.zip",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\AB FILE\\MEDICAL.zip",
+            "type":  "f",
+            "primary_folder":  "AB FILE"
+        },
+        {
+            "name":  "Payments made to date.png",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\AB FILE\\Payments made to date.png",
+            "type":  "f",
+            "primary_folder":  "AB FILE"
+        },
+        {
+            "name":  "2023-08-10 abukar-payment for healthmax.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\disbursement\\2023-08-10 abukar-payment for healthmax.pdf",
+            "type":  "f",
+            "primary_folder":  "disbursement"
+        },
+        {
+            "name":  "2023-08-11 abukar-payment berih medicine pro.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\disbursement\\2023-08-11 abukar-payment berih medicine pro.pdf",
+            "type":  "f",
+            "primary_folder":  "disbursement"
+        },
+        {
+            "name":  "fadumo yusufabukar-payment-william osler.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\disbursement\\fadumo yusufabukar-payment-william osler.pdf",
+            "type":  "f",
+            "primary_folder":  "disbursement"
+        },
+        {
+            "name":  "FADUMO ABUKAR -IDs.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\CLIENT\u0027S INFO\\FADUMO ABUKAR -IDs.pdf",
+            "type":  "f",
+            "primary_folder":  "CLIENT\u0027S INFO"
+        },
+        {
+            "name":  "2023-08-10 Health Max CNR INVOICE.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\EXPENSES \u0026 INVOICES\\2023-08-10 Health Max CNR INVOICE.pdf",
+            "type":  "f",
+            "primary_folder":  "EXPENSES \u0026 INVOICES"
+        },
+        {
+            "name":  "2023-10-31 IE by Sharleen McDowall, C. Psych.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\IEs\\2023-10-31 IE by Sharleen McDowall, C. Psych.pdf",
+            "type":  "f",
+            "primary_folder":  "IEs"
+        },
+        {
+            "name":  "IE - Abukar.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\IEs\\IE - Abukar.pdf",
+            "type":  "f",
+            "primary_folder":  "IEs"
+        },
+        {
+            "name":  "MVA Report-Abukar.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\MVA\\MVA Report-Abukar.pdf",
+            "type":  "f",
+            "primary_folder":  "MVA"
+        },
+        {
+            "name":  "MEDICAL RECORDS.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\MEDICALS\\MEDICAL RECORDS.pdf",
+            "type":  "f",
+            "primary_folder":  "MEDICALS"
+        },
+        {
+            "name":  "Dr. Berih\u0027s CNR.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\MEDICALS\\Dr. Berih\u0027s CNR.pdf",
+            "type":  "f",
+            "primary_folder":  "MEDICALS"
+        },
+        {
+            "name":  "2023-09-17- Standard Benefit Statement-Abukar.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\INSURANCE CORR\\2023-09-17- Standard Benefit Statement-Abukar.pdf",
+            "type":  "f",
+            "primary_folder":  "INSURANCE CORR"
+        },
+        {
+            "name":  "2023-11-16 lrt from unifund re additional info requested.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\INSURANCE CORR\\2023-11-16 lrt from unifund re additional info requested.pdf",
+            "type":  "f",
+            "primary_folder":  "INSURANCE CORR"
+        },
+        {
+            "name":  "lrt from adjusrer re Insurer Examination -Abukar.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\INSURANCE CORR\\lrt from adjusrer re Insurer Examination -Abukar.pdf",
+            "type":  "f",
+            "primary_folder":  "INSURANCE CORR"
+        },
+        {
+            "name":  "OCF-1",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OCF-S\\OCF-1",
+            "type":  "d",
+            "primary_folder":  "OCF-S"
+        },
+        {
+            "name":  "OCF-3",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OCF-S\\OCF-3",
+            "type":  "d",
+            "primary_folder":  "OCF-S"
+        },
+        {
+            "name":  "FADUMO ABUKAR - OCF-1.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OCF-S\\OCF-1\\FADUMO ABUKAR - OCF-1.pdf",
+            "type":  "f",
+            "primary_folder":  "OCF-1"
+        },
+        {
+            "name":  "FADUMO ABUKAR - (OCF-3).pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OCF-S\\OCF-3\\FADUMO ABUKAR - (OCF-3).pdf",
+            "type":  "f",
+            "primary_folder":  "OCF-3"
+        },
+        {
+            "name":  "2023-08-09 -lrt to Healthmax PYSIO re requested cnrs.doc",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OUR CORR\\2023-08-09 -lrt to Healthmax PYSIO re requested cnrs.doc",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "2023-08-09 fax sent to dr. BERIH.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OUR CORR\\2023-08-09 fax sent to dr. BERIH.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "2023-09-28 email from adjuster re to send a AB file.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OUR CORR\\2023-09-28 email from adjuster re to send a AB file.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "2023-09-28 AB file request- Abukar IIII.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OUR CORR\\2023-09-28 AB file request- Abukar IIII.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "2023-09-28 lrt to adjuster re AB file requested.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OUR CORR\\2023-09-28 lrt to adjuster re AB file requested.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "2023-10-13- Norma Grisolia re AB file.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OUR CORR\\2023-10-13- Norma Grisolia re AB file.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "2023-11-16 lrt requesting ambulance call report to etobicoke general hospital.docx",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OUR CORR\\2023-11-16 lrt requesting ambulance call report to etobicoke general hospital.docx",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "Fax Cover Sheet- AB.docx",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OUR CORR\\Fax Cover Sheet- AB.docx",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "healthmax-faxed \u0026confirmation.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OUR CORR\\healthmax-faxed \u0026confirmation.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "BAI - Fillable.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OUR CORR\\BAI - Fillable.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "BDI - Fillable.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\OUR CORR\\BDI - Fillable.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "24 Hrs Cancellation.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\24 Hrs Cancellation.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Attendance Form.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\Attendance Form.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Chiro consent.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\Chiro consent.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Chiro consent2.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\Chiro consent2.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Chiro consent3.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\Chiro consent3.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Excercises Sheet.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\Excercises Sheet.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "CNR INVOICE #1583265.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\CNR INVOICE #1583265.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Irrevocable Authorization and Direction to Pay.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\Irrevocable Authorization and Direction to Pay.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Intake.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\Intake.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Irrevocable Authorization and Direction to.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\Irrevocable Authorization and Direction to.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Medical Authorization.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\Medical Authorization.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Medicals from William Osler.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\Medicals from William Osler.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "OCF-23.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\OCF-23.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "OCF-18.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\OCF-18.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "OCF-1 Complete - Abukar Fadumo.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\OCF-1 Complete - Abukar Fadumo.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "OCF-24.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\OCF-24.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "OCF-3.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\OCF-3.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Patient Assessment.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\Patient Assessment.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Physio consent.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\Physio consent.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Product Pickup Form.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\Product Pickup Form.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Soap Notes.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR - file moved here Mar 21 2024\\PHYSIO\\Soap Notes.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "FADUMO ABUKAR -IDs.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\CLIENT\u0027S INFO\\FADUMO ABUKAR -IDs.pdf",
+            "type":  "f",
+            "primary_folder":  "CLIENT\u0027S INFO"
+        },
+        {
+            "name":  "2023-08-10 abukar-payment for healthmax.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\disbursement\\2023-08-10 abukar-payment for healthmax.pdf",
+            "type":  "f",
+            "primary_folder":  "disbursement"
+        },
+        {
+            "name":  "2023-08-11 abukar-payment berih medicine pro.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\disbursement\\2023-08-11 abukar-payment berih medicine pro.pdf",
+            "type":  "f",
+            "primary_folder":  "disbursement"
+        },
+        {
+            "name":  "fadumo yusufabukar-payment-william osler.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\disbursement\\fadumo yusufabukar-payment-william osler.pdf",
+            "type":  "f",
+            "primary_folder":  "disbursement"
+        },
+        {
+            "name":  "2023-08-10 Health Max CNR INVOICE.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\EXPENSES \u0026 INVOICES\\2023-08-10 Health Max CNR INVOICE.pdf",
+            "type":  "f",
+            "primary_folder":  "EXPENSES \u0026 INVOICES"
+        },
+        {
+            "name":  "2023-11-16 lrt from unifund re additional info requested.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\INSURANCE CORR\\2023-11-16 lrt from unifund re additional info requested.pdf",
+            "type":  "f",
+            "primary_folder":  "INSURANCE CORR"
+        },
+        {
+            "name":  "2023-09-17- Standard Benefit Statement-Abukar.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\INSURANCE CORR\\2023-09-17- Standard Benefit Statement-Abukar.pdf",
+            "type":  "f",
+            "primary_folder":  "INSURANCE CORR"
+        },
+        {
+            "name":  "2023_11_16 lrt from adjusrer re Insurer Examination -Abukar.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\INSURANCE CORR\\2023_11_16 lrt from adjusrer re Insurer Examination -Abukar.pdf",
+            "type":  "f",
+            "primary_folder":  "INSURANCE CORR"
+        },
+        {
+            "name":  "2024_03_29 New Adjuster for Fadumo Abukar.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\INSURANCE CORR\\2024_03_29 New Adjuster for Fadumo Abukar.pdf",
+            "type":  "f",
+            "primary_folder":  "INSURANCE CORR"
+        },
+        {
+            "name":  "2024_04_08 New Adjuster on file-Fadumo Abukar.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\INSURANCE CORR\\2024_04_08 New Adjuster on file-Fadumo Abukar.pdf",
+            "type":  "f",
+            "primary_folder":  "INSURANCE CORR"
+        },
+        {
+            "name":  "2023-10-31 IE by Sharleen McDowall, C. Psych.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\IEs\\2023-10-31 IE by Sharleen McDowall, C. Psych.pdf",
+            "type":  "f",
+            "primary_folder":  "IEs"
+        },
+        {
+            "name":  "IE - Abukar.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\IEs\\IE - Abukar.pdf",
+            "type":  "f",
+            "primary_folder":  "IEs"
+        },
+        {
+            "name":  "MEDICAL RECORDS.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\MEDICALS\\MEDICAL RECORDS.pdf",
+            "type":  "f",
+            "primary_folder":  "MEDICALS"
+        },
+        {
+            "name":  "Dr. Berih\u0027s CNR.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\MEDICALS\\Dr. Berih\u0027s CNR.pdf",
+            "type":  "f",
+            "primary_folder":  "MEDICALS"
+        },
+        {
+            "name":  "William Osler CNR-Fadumo Abukar.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\MEDICALS\\William Osler CNR-Fadumo Abukar.pdf",
+            "type":  "f",
+            "primary_folder":  "MEDICALS"
+        },
+        {
+            "name":  "MVA Report-Abukar.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\MVA\\MVA Report-Abukar.pdf",
+            "type":  "f",
+            "primary_folder":  "MVA"
+        },
+        {
+            "name":  "OCF-3",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OCF-S\\OCF-3",
+            "type":  "d",
+            "primary_folder":  "OCF-S"
+        },
+        {
+            "name":  "OCF-1",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OCF-S\\OCF-1",
+            "type":  "d",
+            "primary_folder":  "OCF-S"
+        },
+        {
+            "name":  "FADUMO ABUKAR - (OCF-3).pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OCF-S\\OCF-3\\FADUMO ABUKAR - (OCF-3).pdf",
+            "type":  "f",
+            "primary_folder":  "OCF-3"
+        },
+        {
+            "name":  "FADUMO ABUKAR - OCF-1.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OCF-S\\OCF-1\\FADUMO ABUKAR - OCF-1.pdf",
+            "type":  "f",
+            "primary_folder":  "OCF-1"
+        },
+        {
+            "name":  "2023-08-09 -lrt to Healthmax PYSIO re requested cnrs.doc",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR\\2023-08-09 -lrt to Healthmax PYSIO re requested cnrs.doc",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "2023-08-09 fax sent to dr. BERIH.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR\\2023-08-09 fax sent to dr. BERIH.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "2023-09-28 AB file request- Abukar IIII.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR\\2023-09-28 AB file request- Abukar IIII.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "2023-09-28 email from adjuster re to send a AB file.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR\\2023-09-28 email from adjuster re to send a AB file.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "2023-09-28 lrt to adjuster re AB file requested.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR\\2023-09-28 lrt to adjuster re AB file requested.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "2023-10-13- Norma Grisolia re AB file.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR\\2023-10-13- Norma Grisolia re AB file.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "2023-11-16 lrt requesting ambulance call report to etobicoke general hospital.docx",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR\\2023-11-16 lrt requesting ambulance call report to etobicoke general hospital.docx",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "2024-01-18 ltr requesting clinical notes and records to Etobicoke General Hospital.docx",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR\\2024-01-18 ltr requesting clinical notes and records to Etobicoke General Hospital.docx",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "BAI - Fillable.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR\\BAI - Fillable.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "Closing Tort Letter.docx",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR\\Closing Tort Letter.docx",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "BDI - Fillable.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR\\BDI - Fillable.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "Fadumo Abukar Closing Tort Letter.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR\\Fadumo Abukar Closing Tort Letter.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "Fax Cover Sheet- AB.docx",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR\\Fax Cover Sheet- AB.docx",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "healthmax-faxed \u0026confirmation.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\OUR CORR\\healthmax-faxed \u0026confirmation.pdf",
+            "type":  "f",
+            "primary_folder":  "OUR CORR"
+        },
+        {
+            "name":  "24 Hrs Cancellation.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\24 Hrs Cancellation.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Attendance Form.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\Attendance Form.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Chiro consent2.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\Chiro consent2.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Chiro consent.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\Chiro consent.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "CNR INVOICE #1583265.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\CNR INVOICE #1583265.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Chiro consent3.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\Chiro consent3.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Intake.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\Intake.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Excercises Sheet.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\Excercises Sheet.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Irrevocable Authorization and Direction to Pay.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\Irrevocable Authorization and Direction to Pay.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Irrevocable Authorization and Direction to.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\Irrevocable Authorization and Direction to.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Medical Authorization.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\Medical Authorization.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Medicals from William Osler.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\Medicals from William Osler.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "OCF-18.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\OCF-18.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "OCF-23.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\OCF-23.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "OCF-24.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\OCF-24.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "OCF-3.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\OCF-3.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "OCF-1 Complete - Abukar Fadumo.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\OCF-1 Complete - Abukar Fadumo.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Physio consent.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\Physio consent.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Patient Assessment.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\Patient Assessment.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Soap Notes.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\Soap Notes.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        },
+        {
+            "name":  "Product Pickup Form.pdf",
+            "path":  "E:\\AB951- FADUMO ABUKAR\\AB951- FADUMO ABUKAR\\PHYSIO\\Product Pickup Form.pdf",
+            "type":  "f",
+            "primary_folder":  "PHYSIO"
+        }
+
+    ]
+
+
+
+
+

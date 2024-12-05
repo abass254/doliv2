@@ -1,5 +1,5 @@
 <div class="nav-header">
-    <a href="/" class="brand-logo">
+    <a href="/home" class="brand-logo">
         <img class="logo-abbr" src="https://themexriver.com/wp/imigrat/wp-content/uploads/2023/05/ficon-1.png" alt="">
         <img class="logo-compact" src="ihttp://dolilaw.com/wp-content/uploads/2024/03/Untitled-design-35.png" alt="">
         <img class="brand-title" src="http://dolilaw.com/wp-content/uploads/2024/03/Untitled-design-35.png" alt="">
