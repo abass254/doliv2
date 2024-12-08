@@ -163,22 +163,10 @@ class FolderController extends Controller
 
     public function viewFileAsPdf($id)
     {
-        // $docxPath = storage_path('app/public/uploads/0/ABASS AHMED RESUME.docx');
-        // $pdfPath = storage_path('app/public/uploads/0/ABASS AHMED RESUME.pdf');
-
-        // // Check if the PDF already exists to avoid redundant conversion
-        // if (!file_exists($pdfPath)) {
-        //     $phpWord = IOFactory::load($docxPath);
-        //     $pdfWriter = IOFactory::createWriter($phpWord, 'PDF');
-        //     $pdfWriter->save($pdfPath);
-        // }
 
         $document = Folder::where('id', $id)->first();
-        
-      //  return $document;
 
         $filePath = storage_path('app/public/uploads/'.$document->folder_name);
-
 
         $fileName = $fileName = basename($filePath);
 
@@ -195,7 +183,7 @@ class FolderController extends Controller
     
             return view('folders.view_file', compact('filePath', 'fileExtension', 'fileName', 'document'));
         } else {
-          //  return 'File not found';
+            
             abort(404, "File not found.");
         }
     }

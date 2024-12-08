@@ -9,6 +9,22 @@
     <link href="{{ asset('vendor/jqvmap/css/jqvmap.min.css') }}" rel="stylesheet">
     <link rel="icon" href="https://dolicloudinc.ca:2828/webman/favicon.ico?v=40438" />
     <link href="{{ asset('vendor/chartist/css/chartist.min.css') }}" rel="stylesheet">
+
+
+    <link href="{{ asset('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800') }}" rel="stylesheet">
+    <link href="{{ asset('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700') }}" rel="stylesheet">
+    <link href="{{ asset('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700') }}" rel="stylesheet">
+    <link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:400,500,700') }}" rel="stylesheet">
+    <link href="{{ asset('https://fonts.googleapis.com/css?family=Nunito:400,600,700') }}" rel="stylesheet">
+    <link href="{{ asset('icons/helveticaNeue/css/helveticaNeue.css') }}" rel="stylesheet">
+    <link href="{{ asset('icons/fontawesome/css/all.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('icons/material-design-iconic-font/css/materialdesignicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('icons/themify-icons/css/themify-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('icons/line-awesome/css/line-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('icons/flaticon/flaticon.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/metismnu/css/metisMenu.min.css') }}" rel="stylesheet">
+    
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
@@ -53,19 +69,7 @@
             opacity: 1;
         }
 
-        @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800");
-        @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
-        @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700");
-        @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
-        @import url("https://fonts.googleapis.com/css?family=Nunito:400,600,700");
-        @import url("{{ asset('icons/helveticaNeue/css/helveticaNeue.css') }}");
-        @import url("{{ asset('icons/fontawesome/css/all.min.css') }}");
-        @import url("{{ asset('icons/material-design-iconic-font/css/materialdesignicons.min.css') }}");
-        @import url("{{ asset('icons/themify-icons/css/themify-icons.css') }}");
-        @import url("{{ asset('icons/line-awesome/css/line-awesome.min.css') }}");
-        @import url("{{ asset('icons/flaticon/flaticon.css') }}");
-        @import url("{{ asset('vendor/animate/animate.min.css') }}");
-        @import url("{{ asset('vendor/metismenu/css/metisMenu.min.css') }}");
+       
 
 
 

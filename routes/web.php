@@ -19,9 +19,6 @@ Route::get('/login', function () {
 
 Route::post('/login', [AccountController::class, 'login'])->name('login');
 
-Route::get('/', function () {
-    return App\Models\Folder::latest()->take(5)->get();
-});
 
 // Route::get('/files', function () {
 //     return view('cases.list');
@@ -29,7 +26,8 @@ Route::get('/', function () {
 
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/home', [AccountController::class, 'homePage']); 
+   
+    Route::get('/home', [AccountController::class, 'homePage'])->name('home'); 
     Route::post('/logout', [AccountController::class, 'logout'])->name('logout');
     Route::post('/change-password', [AccountController::class, 'changePassword'])->name('password.update');
 

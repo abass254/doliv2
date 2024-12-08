@@ -2,11 +2,18 @@
 
 @section('page-title', 'View File')
 
-<?php
+<!-- <?php
 
 $fileP = asset('storage/uploads/'.$fileName)
 
 ?>
+
+
+@php
+    $fala = Storage::disk('myfiles')->directories();
+    $count = count($fala);
+@endphp -->
+
 
 @section('content')
 <style>
@@ -82,6 +89,13 @@ $fileP = asset('storage/uploads/'.$fileName)
             </li>
         </ol>
     </div>
+
+    <!-- <ul>
+        <p>{{ $count }}</p>
+        @foreach ($fala as $file)
+            <li>{{ $file }}</li>
+        @endforeach
+    </ul> -->
         
     <span class="d-flex">
         <div class="col-lg-8 scrollable-content">
