@@ -4,10 +4,13 @@
 
 <!-- <?php
 
-// $fileP = asset('storage/uploads/'.$fileName)
+//$fileP = asset('storage/uploads/'.$fileName);
 
 
-$fileP = "C:\Users\Dell\Documents\ABASS AHMED RESUME.pdf";
+// $path = $
+
+
+// $fileP = "C:\Users\Dell\Documents\ABASS AHMED RESUME.pdf";
 
 ?>file
 
@@ -88,7 +91,7 @@ $fileP = "C:\Users\Dell\Documents\ABASS AHMED RESUME.pdf";
     <div class="page-titles d-flex justify-content-between align-items-center">
         <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item text-uppercase">
-                <strong class="text-primary">{{ $fileName ?? "" }}</strong>
+                <strong class="text-primary"></strong>
             </li>
         </ol>
     </div>
@@ -104,7 +107,7 @@ $fileP = "C:\Users\Dell\Documents\ABASS AHMED RESUME.pdf";
         <div class="col-lg-8 scrollable-content">
             <div class="card-body overflow-hidden p-3">
             <!-- <iframe src="" width="100%" height="600px" style="border: none;"></iframe> -->
-            <iframe src="{{$fileP}}" frameborder="0" style="width:100%;height:900px;"></iframe>
+            <iframe src="/mnt/dir/jamaicapassportapplicationform.pdf" frameborder="0" style="width:100%;height:900px;"></iframe>
             </div>
         </div>
         <div class="col-lg-4 ">

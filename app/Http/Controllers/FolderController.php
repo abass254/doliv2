@@ -15,6 +15,7 @@ use Dompdf\Dompdf;
 use Barryvdh\DomPDF\Facade\Pdf as PDF;
 
 
+//status	file_type	file_no	first_name	last_name	tort	date_of_loss	opened	claim_no	policy_no	client_address	client_phone_no	date_of_birth	drivers_license	ins_company	ins_address	adj_name	adj_phone_no adj_fax_no	family_doctor	doctor_address	doctor_phone_no	doc_fax_no	rehab	rehab_phone_no	rehab_fax_no	assessment_center	assessment_fax_no	ohip_no	sin_no	file_city	is_new
 
 //use PhpOffice\PhpWord\IOFactory as WordIOFactory;
 //use PhpOffice\PhpSpreadsheet\IOFactory as SpreadsheetIOFactory;
@@ -25,84 +26,84 @@ class FolderController extends Controller
 
 
     public function uploadFolder(Request $request)
-{
-    // Validate uploaded files
-    $request->validate([
-        'files.*' => 'required|file|max:2048', // Ensure files are uploaded
-    ]);
+    {
+        // Validate uploaded files
+        $request->validate([
+            'files.*' => 'required|file|max:2048', // Ensure files are uploaded
+        ]);
 
-    // Initialize variables for folder mapping
-    $rootFolderName = null;
-    $folderMap = [];
-    $uploadPath = 'uploads'; // Storage location
+        // Initialize variables for folder mapping
+        $rootFolderName = null;
+        $folderMap = [];
+        $uploadPath = 'uploads'; // Storage location
 
-    foreach ($request->file('files') as $file) {
-        $relativePath = $file->getClientOriginalName(); // Includes folder structure
-        $pathParts = explode('/', $relativePath); // Split path into parts
+        foreach ($request->file('files') as $file) {
+            $relativePath = $file->getClientOriginalName(); // Includes folder structure
+            $pathParts = explode('/', $relativePath); // Split path into parts
 
-        // Check the file extension (skip if not .pdf or .docx)
-        $extension = strtolower($file->getClientOriginalExtension());
-        if (!in_array($extension, ['pdf', 'docx'])) {
-            continue; // Skip the file and continue with the next one
-        }
+            // Check the file extension (skip if not .pdf or .docx)
+            $extension = strtolower($file->getClientOriginalExtension());
+            if (!in_array($extension, ['pdf', 'docx'])) {
+                continue; // Skip the file and continue with the next one
+            }
 
-        // Process each part of the path (subfolder structure)
-        foreach ($pathParts as $index => $part) {
-            // Check if this is the root folder
-            if ($index === 0 && !$rootFolderName) {
-                $rootFolderName = $part;
+            // Process each part of the path (subfolder structure)
+            foreach ($pathParts as $index => $part) {
+                // Check if this is the root folder
+                if ($index === 0 && !$rootFolderName) {
+                    $rootFolderName = $part;
 
-                // Check if the root folder exists, otherwise create it
-                $rootFolder = Folder::firstOrCreate([
-                    'folder_name' => $rootFolderName,
-                    'primary_folder' => 0, // Root folder
-                    'file' => 1, // Constant value for folder
-                    'folder_status' => 1, // Active
-                    'folder_type' => 'folder',
-                ]);
-
-                $folderMap[$part] = $rootFolder->id; // Store root folder id
-            } elseif ($index === count($pathParts) - 1) {
-                // Handling the file (last part of the path)
-                $parentFolderId = $folderMap[$pathParts[$index - 1]] ?? null;
-
-                // Ensure parent folder exists for the file
-                if ($parentFolderId !== null) {
-                    Folder::create([
-                        'folder_name' => $part,
-                        'primary_folder' => $parentFolderId,
-                        'file' => 1, // Constant value for file
+                    // Check if the root folder exists, otherwise create it
+                    $rootFolder = Folder::firstOrCreate([
+                        'folder_name' => $rootFolderName,
+                        'primary_folder' => 0, // Root folder
+                        'file' => 1, // Constant value for folder
                         'folder_status' => 1, // Active
-                        'folder_type' => 'file',
+                        'folder_type' => 'folder',
                     ]);
 
-                    // Store the file in the appropriate folder
-                    $file->storeAs("$uploadPath/$rootFolderName", $relativePath);
-                }
-            } else {
-                // Handle folders
-                if (!isset($folderMap[$part])) {
-                    // Save the folder if it does not exist
+                    $folderMap[$part] = $rootFolder->id; // Store root folder id
+                } elseif ($index === count($pathParts) - 1) {
+                    // Handling the file (last part of the path)
                     $parentFolderId = $folderMap[$pathParts[$index - 1]] ?? null;
 
-                    // Check if parent folder exists
+                    // Ensure parent folder exists for the file
                     if ($parentFolderId !== null) {
-                        $folder = Folder::firstOrCreate([
+                        Folder::create([
                             'folder_name' => $part,
                             'primary_folder' => $parentFolderId,
-                            'file' => 1, // Constant value for folder
+                            'file' => 1, // Constant value for file
                             'folder_status' => 1, // Active
-                            'folder_type' => 'folder',
+                            'folder_type' => 'file',
                         ]);
-                        $folderMap[$part] = $folder->id; // Store folder id
+
+                        // Store the file in the appropriate folder
+                        $file->storeAs("$uploadPath/$rootFolderName", $relativePath);
+                    }
+                } else {
+                    // Handle folders
+                    if (!isset($folderMap[$part])) {
+                        // Save the folder if it does not exist
+                        $parentFolderId = $folderMap[$pathParts[$index - 1]] ?? null;
+
+                        // Check if parent folder exists
+                        if ($parentFolderId !== null) {
+                            $folder = Folder::firstOrCreate([
+                                'folder_name' => $part,
+                                'primary_folder' => $parentFolderId,
+                                'file' => 1, // Constant value for folder
+                                'folder_status' => 1, // Active
+                                'folder_type' => 'folder',
+                            ]);
+                            $folderMap[$part] = $folder->id; // Store folder id
+                        }
                     }
                 }
             }
         }
-    }
 
-    return response()->json(['message' => 'Folder and files uploaded successfully.']);
-}
+        return response()->json(['message' => 'Folder and files uploaded successfully.']);
+    }
 
 
     
@@ -164,7 +165,35 @@ class FolderController extends Controller
     public function viewFileAsPdf($id)
     {
         
+        $folder = Folder::where('id', $id)->first();
         return view('folders.view_file');
+        
+        if(empty($folder->meta_path)){
+           // return 'This is an uploaded file';
+            $filePath = $folder->file_path;
+        }
+
+        else{
+
+            $filePath = storage_path('app/public/uploads/'.$folder->folder_name);
+         //   return 'This is an imported file';
+        }
+
+        $filePath = '/mnt/dir/jamaicapassportapplicationform.pdf';
+
+      //  $path = "/mnt/dir/{$filename}";
+
+        if (!file_exists($filePath)) {
+            abort(404, 'File not found.');
+        }
+
+        $mimeType = mime_content_type($filePath);
+
+        return Response::file($filePath, [
+            'Content-Type' => $mimeType,
+            'Content-Disposition' => 'inline; filename="' . $filename . '"',
+        ]);
+        
 
         $document = Folder::where('id', $id)->first();
 
@@ -410,20 +439,19 @@ class FolderController extends Controller
 
     public function index()
     { 
-        $data = Folder::latest()->take(5)->get();
-        
+        $data = Folder::latest()->take(30)->get();
 
+        
+        $data = Folder::where('meta_type', 'f')->take(50)->get();
+      //  return $data;
         foreach($data as $dt){
 
            $dt->theme = $dt->status = 1 ? 'success' : 'danger';
-           $dt->file_status = $dt->status = 1 ? 'Open' : 'Closed';
-           $fol = Folder::where('meta_name', 'LIKE', '%'.$dt->meta_primary.'%')->first();
-           $dt->primary = $fol->id;
+           $dt->folder_status = $dt->status = 1 ? 'Open' : 'Closed';
         //    $dt->st_metapath
-
         }
         
-        return $data;
+       // return $data;
 
 
         //return $data;
@@ -433,6 +461,42 @@ class FolderController extends Controller
         
        // return response()->json(['items' => $data]);
     }
+
+
+    public function updateFolderDetails(){
+        $data = Folder::all();
+
+        foreach($data as $dt){
+
+        //    $dt->theme = $dt->status = 1 ? 'success' : 'danger';
+        //    $dt->file_status = $dt->status = 1 ? 'Open' : 'Closed';
+           $fol = Folder::where('meta_name', 'LIKE', '%'.$dt->meta_primary.'%')->first();
+           $primary = $fol->id ?? 0;
+           $path = str_replace('/mnt/FILE_SERVER/TORONTO OPEN PERSONAL INJURY FILES/', 'external/', $dt->meta_path);
+           preg_match('/external\/[^\/]+\/([^\/]+\/[^\/]+)/', $path, $matches);
+           $clean_path = $matches[1] ?? "NIL";
+           $possible_file = File::where('file_no', 'LIKE', '%'.$clean_path.'%')->first();
+           $poble_file = $possible_file->id ?? 0;
+        //    $dt->st_metapath
+
+
+          // $fl = Folder::find($dt->id);
+           $dt->folder_name = $dt->meta_name;
+           $dt->folder_type = $dt->meta_type == 'f' ? 'folder' : 'file';
+           $dt->primary_folder = $primary;
+           $dt->folder_path = $path;
+           $dt->folder_status = 1;
+           $dt->file = $poble_file;
+           $dt->save();
+        }
+
+
+        
+        return $data;
+
+    }
+
+
 
 
     public function create()

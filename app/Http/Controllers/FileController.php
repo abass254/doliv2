@@ -217,6 +217,20 @@ class FileController extends Controller
 
     public function index()
     { 
+        $data = File::all();
+
+        // $f = [];
+        // foreach($data as $dt){
+        //     $f[] =
+        //     [
+        //         'id' => $dt->id,
+        //         'date_of_loss' => $dt->date_of_loss,
+        //     ];
+        //    // $dt->id 
+        // }
+
+
+        // return $f;
 
         $data = File::all()->map(function($dt) {
             $dt->file_no =  str_replace(' ', '', $dt->file_no);
@@ -230,7 +244,7 @@ class FileController extends Controller
             return $dt;
         });
 
-        //return $data;
+       // return $data;
     
         return view('cases.list', compact('data'));
     }

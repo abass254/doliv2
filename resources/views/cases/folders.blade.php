@@ -11,7 +11,7 @@
         <form class="default-search">
 
             <div class="input-group search-area ms-auto w-100 d-inline-flex mr-1">
-                <input type="text" class="form-control" placeholder="Search here">
+                <input id="search" type="text" class="form-control" placeholder="Search by File No, Name">
                 <span class="input-group-text"><button class="bg-transparent border-0"><i class="flaticon-381-search-2"></i></button></span>
             </div>
         </form>
@@ -31,7 +31,7 @@
                                 <img class="img-fluid rounded" src="images/product/database.jpg" alt="">
                             </div>
                             <div class="new-arrival-content text-center mt-3">
-                                <h4>{{ $dt->file_no }}</h4>
+                                <h4 class="file-no">{{ $dt->file_no }}</h4>
                                 <h5 class="discount">{{ $dt->first_name . ' ' . $dt->last_name}}</h5>
                                 <span class="price"> <a href="/files_station/{{ $dt->id }}/main" class="btn btn-sm btn-primary">OPEN</a> </span>
                             </div>
@@ -42,6 +42,27 @@
         @endforeach
         @endif
     </div>
+
+
+    <script>
+        document.getElementById('search').addEventListener('keyup', function() {
+            const searchQuery = this.value.toLowerCase();
+            const items = document.querySelectorAll('.product-item');
+
+            items.forEach(item => {
+                const fileNo = item.querySelector('.file-no').innerText.toLowerCase();
+                const name = item.querySelector('.discount').innerText.toLowerCase();
+
+                // Check if the search query matches any of the values (file_no, first_name, last_name)
+                if (fileNo.includes(searchQuery) || name.includes(searchQuery)) {
+                    item.style.display = ''; // Show item
+                } else {
+                    item.style.display = 'none'; // Hide item
+                }
+            });
+        });
+
+    </script>
     
 
 @endsection

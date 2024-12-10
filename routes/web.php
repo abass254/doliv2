@@ -40,6 +40,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/file-contacts', [FileController::class, 'saveFileContact'])->name('file-contacts');
     Route::post('/file-finances', [FileController::class, 'saveFileFinance'])->name('file-finances');
     Route::get('/files_station', [FolderController::class, 'getAllFiles']);
+    Route::get('/update_folder_details', [FolderController::class, 'updateFolderDetails']);
     Route::get('/files_station/{id}/main', [FolderController::class, 'justTrial']);
     Route::get('/files_station/{id}/folder/{sub_id}', [FolderController::class, 'justTrial'])->name('file_stations.show');
 

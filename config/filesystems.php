@@ -62,6 +62,13 @@ return [
             'driver' => 'local',
             'root' => 'C:\Users\Dell\Documents\Projects\BE\doliv2',
         ],
+
+        'external' => [
+            'driver' => 'local',
+            'root' => '/mnt/dir',
+        ],
+
+
     
 
     ],
