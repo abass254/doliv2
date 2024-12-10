@@ -149,7 +149,9 @@
 										</a>
 										<a href="files/{{ $dt->id }}" class="btn btn-primary btn-sm sharp m-1"><b>
 										VIEW
-										</b></a>
+										</b>
+										
+									</a>
 									</td>
 								</tr>
 								@endforeach

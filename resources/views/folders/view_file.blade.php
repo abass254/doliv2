@@ -4,8 +4,8 @@
 
 <!-- <?php
 
-//$fileP = asset('storage/uploads/'.$fileName);
 
+//$fileP = asset('storage/uploads/'.$fileName); 
 
 // $path = $
 
@@ -14,11 +14,27 @@
 
 ?>file
 
-
-@php
+-->
+<!-- @php
     $fala = Storage::disk('myfiles')->directories();
     $count = count($fala);
-@endphp -->
+
+
+    $filePath = "/mnt/FILE_SERVER/'TORONTO OPEN PERSONAL INJURY'/'AB950 - ASAD AYUB'/jamaicapassportapplicationform.pdf";
+
+    $content = file_get_contents($filePath);
+
+    
+    $cleanedPath = str_replace("/mnt/", "", $filePath);
+    $cleanedPath = "mnt-dir/jamaicapassportapplicationform.pdf";
+
+    $new_url = Storage::url($cleanedPath);
+
+   // $new_url = str_replace("/STORAGE/", "", $url);
+
+
+@endphp  -->
+
 
 
 @section('content')
@@ -92,6 +108,7 @@
         <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item text-uppercase">
                 <strong class="text-primary"></strong>
+                <p></p>
             </li>
         </ol>
     </div>
@@ -107,7 +124,7 @@
         <div class="col-lg-8 scrollable-content">
             <div class="card-body overflow-hidden p-3">
             <!-- <iframe src="" width="100%" height="600px" style="border: none;"></iframe> -->
-            <iframe src="/mnt/dir/jamaicapassportapplicationform.pdf" frameborder="0" style="width:100%;height:900px;"></iframe>
+            <iframe src="/" frameborder="0" style="width:100%;height:900px;"></iframe>
             </div>
         </div>
         <div class="col-lg-4 ">
