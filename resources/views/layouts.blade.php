@@ -17,13 +17,15 @@
     <link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:400,500,700') }}" rel="stylesheet">
     <link href="{{ asset('https://fonts.googleapis.com/css?family=Nunito:400,600,700') }}" rel="stylesheet">
     <link href="{{ asset('icons/helveticaNeue/css/helveticaNeue.css') }}" rel="stylesheet">
-    <link href="{{ asset('icons/fontawesome/css/all.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('icons/material-design-iconic-font/css/materialdesignicons.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('icons/themify-icons/css/themify-icons.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('icons/fontawesome/css/all.min.css') }}" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link href="{{ asset('icons/material-design-iconic-font/css/materialdesignicons.min.css') }}" rel="stylesheet"> -->
+    <!-- <link href="{{ asset('icons/themify-icons/css/themify-icons.css') }}" rel="stylesheet"> -->
     <link href="{{ asset('icons/line-awesome/css/line-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('icons/flaticon/flaticon.css') }}" rel="stylesheet">
-    <link href="{{ asset('vendor/animate/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('vendor/metismnu/css/metisMenu.min.css') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('icons/flaticon/flaticon.css') }}" rel="stylesheet"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet"/>
+    <!-- <link href="{{ asset('vendor/animate/animate.min.css') }}" rel="stylesheet"> -->
+    <!-- <link href="{{ asset('vendor/metismnu/css/metisMenu.min.css') }}" rel="stylesheet"> -->
     
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">

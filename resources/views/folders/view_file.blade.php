@@ -4,9 +4,12 @@
 
 <!-- <?php
 
-$fileP = asset('storage/uploads/'.$fileName)
+// $fileP = asset('storage/uploads/'.$fileName)
 
-?>
+
+$fileP = "C:\Users\Dell\Documents\ABASS AHMED RESUME.pdf";
+
+?>file
 
 
 @php
@@ -85,7 +88,7 @@ $fileP = asset('storage/uploads/'.$fileName)
     <div class="page-titles d-flex justify-content-between align-items-center">
         <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item text-uppercase">
-                <strong class="text-primary">{{ $fileName }}</strong>
+                <strong class="text-primary">{{ $fileName ?? "" }}</strong>
             </li>
         </ol>
     </div>
@@ -101,23 +104,7 @@ $fileP = asset('storage/uploads/'.$fileName)
         <div class="col-lg-8 scrollable-content">
             <div class="card-body overflow-hidden p-3">
             <!-- <iframe src="" width="100%" height="600px" style="border: none;"></iframe> -->
-            @if($fileExtension == 'docx')        
-                <!-- <iframe src="https://view.officeapps.live.com/op/view.aspx?src={{ urlencode($filePath) }}" frameborder="0" style="width:100%;min-height:640px;"></iframe> -->
-                <!-- <iframe src="https://view.officeapps.live.com/op/view.aspx?src={{ urlencode(url($filePath)) }}" frameborder="0" style="width:100%;min-height:640px;"></iframe> -->
-                <!-- <iframe width="100%" height="500px" src="https://docs.google.com/gview?url={{ urlencode(url('storage/uploads/0/cov_letter.docx')) }}&embedded=true"></iframe> -->
-                <!-- <iframe src="https://view.officeapps.live.com/op/embed.aspx?src={{ urlencode($fileP) }}" width="100%" height="600px" frameborder="0"></iframe> -->
-                <!-- <iframe src="https://view.officeapps.live.com/op/embed.aspx?src={{ urlencode(asset('storage/uploads/0/cov_letter.docx')) }}" width="100%" height="600px" frameborder="0"></iframe> -->
-                    <!-- <iframe src="https://docs.google.com/viewer?url=http://127.0.0.1:8000/storage/uploads/0/cov_letter.docx&embedded=true" width="100%" height="600px" frameborder="0"></iframe> -->
-                    <!-- <iframe src="https://docs.google.com/viewer?embedded=true&url=https://ohansemmanuel.github.io/assets/pdf/understanding-flexbox.pdf" style="width: 100%; height: 400px; border: none;"></iframe> -->
-                    <iframe src="https://docs.google.com/viewer?embedded=true&url=http://127.0.0.1:8000/storage/uploads/0/cov_letter.docx" frameborder="no" style="width:100%;height:600px"></iframe>
-
-
-
-            @elseif($fileExtension == 'pdf')
-                <iframe src="{{$fileP}}" frameborder="0" style="width:100%;height:900px;"></iframe>
-            @else
-                <p>Unsupported file type.</p>
-            @endif
+            <iframe src="{{$fileP}}" frameborder="0" style="width:100%;height:900px;"></iframe>
             </div>
         </div>
         <div class="col-lg-4 ">
@@ -135,7 +122,7 @@ $fileP = asset('storage/uploads/'.$fileName)
                 </div>
                 <div class="card-footer">
                     <div class="input-group type_msg">
-                        <input hidden type="text" id="folder-input" name="folder" value="{{ $document->id }}">
+                        <input hidden type="text" id="folder-input" name="folder" value="{{ $document->id ?? '0' }}">
                         <textarea id="comment-input" class="form-control" placeholder="Type your message..."></textarea>
                         <div class="input-group-append">
                             <button type="button" id="submit-comment" class="btn btn-primary"><i class="fa fa-location-arrow"></i></button>

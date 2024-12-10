@@ -163,6 +163,8 @@ class FolderController extends Controller
 
     public function viewFileAsPdf($id)
     {
+        
+        return view('folders.view_file');
 
         $document = Folder::where('id', $id)->first();
 
@@ -173,7 +175,7 @@ class FolderController extends Controller
 
       //  return $filePath;
 
-        // return view('folders.view_file', compact('path'));
+        
 
         $fileExtension = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
 
@@ -408,15 +410,21 @@ class FolderController extends Controller
 
     public function index()
     { 
-        $data = Folder::getAllFolders();
-
+        $data = Folder::latest()->take(5)->get();
+        
 
         foreach($data as $dt){
 
            $dt->theme = $dt->status = 1 ? 'success' : 'danger';
            $dt->file_status = $dt->status = 1 ? 'Open' : 'Closed';
+           $fol = Folder::where('meta_name', 'LIKE', '%'.$dt->meta_primary.'%')->first();
+           $dt->primary = $fol->id;
+        //    $dt->st_metapath
 
         }
+        
+        return $data;
+
 
         //return $data;
         return view('folders.list', compact('data'));

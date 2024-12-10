@@ -30,6 +30,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/home', [AccountController::class, 'homePage'])->name('home'); 
     Route::post('/logout', [AccountController::class, 'logout'])->name('logout');
     Route::post('/change-password', [AccountController::class, 'changePassword'])->name('password.update');
+    Route::get('/', function () {
+        return 'Welcome!!!';
+    });
 
 
 
