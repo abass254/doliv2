@@ -15,6 +15,11 @@ class Folder extends Model
         'primary_folder',
         'folder_status',
         'folder_type',
+        'meta_name',
+        'meta_primary',
+        'meta_path',
+        'meta_type',
+        'ext',
         'folder_path',
     ];
 

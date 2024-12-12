@@ -12,28 +12,8 @@
 
 // $fileP = "C:\Users\Dell\Documents\ABASS AHMED RESUME.pdf";
 
-?>file
+?>
 
--->
-<!-- @php
-    $fala = Storage::disk('myfiles')->directories();
-    $count = count($fala);
-
-
-    $filePath = "/mnt/FILE_SERVER/'TORONTO OPEN PERSONAL INJURY'/'AB950 - ASAD AYUB'/jamaicapassportapplicationform.pdf";
-
-    $content = file_get_contents($filePath);
-
-    
-    $cleanedPath = str_replace("/mnt/", "", $filePath);
-    $cleanedPath = "mnt-dir/jamaicapassportapplicationform.pdf";
-
-    $new_url = Storage::url($cleanedPath);
-
-   // $new_url = str_replace("/STORAGE/", "", $url);
-
-
-@endphp  -->
 
 
 
@@ -113,6 +93,15 @@
         </ol>
     </div>
 
+
+    <!-- <ul>
+        <p>{{ $count }}</p>
+        @foreach ($fala as $file)
+            <li>{{ $file }}</li>
+        @endforeach
+    </ul> -->
+        
+        
     <!-- <ul>
         <p>{{ $count }}</p>
         @foreach ($fala as $file)
@@ -124,6 +113,11 @@
         <div class="col-lg-8 scrollable-content">
             <div class="card-body overflow-hidden p-3">
             <!-- <iframe src="" width="100%" height="600px" style="border: none;"></iframe> -->
+            <iframe 
+    src="http://docs.google.com/gview?url={{ Storage::url('mnt-dir/jamaicapassportapplicationform.pdf')}}&embedded=true" 
+    style="width:600px; height:500px;" 
+    frameborder="0">
+</iframe>
             <iframe src="/" frameborder="0" style="width:100%;height:900px;"></iframe>
             </div>
         </div>

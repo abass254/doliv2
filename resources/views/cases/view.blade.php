@@ -531,7 +531,7 @@
                             </div>
                             <div class="mb-3 col-md-12">
                                 <label id="contact_details" class="form-label">Proof of Transaction(Cheque, Receipt....)</label>
-                                <input required name="fn_filename" id="fn_filename" type="file" class="form-control form-control-sm" accept=".pdf,.docx">
+                                <input required name="fn_filename" id="fn_filename" type="file" class="form-control form-control-sm">
                             </div>
                         </div>
                         

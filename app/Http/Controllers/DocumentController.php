@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Document;
+use App\Models\User;
 
 class DocumentController extends Controller
 {
@@ -13,8 +14,18 @@ class DocumentController extends Controller
     public function index()
     {
         //
-        $comments = DocumentComments::where('status', '1')->latest()->get();
-        return response()->json($comments);
+
+        $data = Document::latest()->get()->map(function($d){
+            $user = User::where('id', $d->creater)->first();
+            $d->creator = $user->name;
+            return $d;
+        });
+
+        return view('documents.list', compact('data'));
+
+
+        //$comments = DocumentComments::where('status', '1')->latest()->get();
+        return response()->json($documents);
     }
 
     /**

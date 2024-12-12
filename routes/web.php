@@ -26,6 +26,10 @@ Route::post('/login', [AccountController::class, 'login'])->name('login');
 
 
 Route::middleware(['auth'])->group(function () {
+
+
+    Route::get('/scan-directory', [FolderController::class, 'scan']);
+
    
     Route::get('/home', [AccountController::class, 'homePage'])->name('home'); 
     Route::post('/logout', [AccountController::class, 'logout'])->name('logout');

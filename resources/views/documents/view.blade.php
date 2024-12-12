@@ -3,7 +3,28 @@
 @section('page-title', 'View Document')
 
 @section('content')
+
+
 <style>
+    @media print {
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      button {
+        display: none;
+      }
+
+      .custom-footer {
+        display: block;
+      }
+
+      /* Hides default browser headers and footers */
+      @page {
+        margin: 0;
+      }
+    }
     .scrollable-content {
         max-height: 1000px; /* Adjust the height as needed */
         overflow-y: auto; /* Enables vertical scrolling */
@@ -52,7 +73,7 @@
         [data-theme-version="dark"] 
         .chat-list-header a svg g [fill] {
           fill: #fff; }
-
+    
     
 
 
@@ -67,14 +88,19 @@
                 <strong class="text-primary">{{ $document->title }}</strong>
             </li>
         </ol>
+        <button class="btn btn-info btn-sm" onclick="printContent()"><i class="fa fa-print"></i></button>
         <a {{ $document->creater == Auth::user()->id ? '' : 'hidden' }} class="btn btn-danger btn-sm" href="{{ route('documents.edit', $document->id) }}">CONTINUE EDITING</a>
     </div>
         
     <span class="d-flex">
-        <div class="col-lg-8 scrollable-content">
-            <div class="card-body overflow-hidden p-3">
-                {!! $document->content !!}
+        <div class="col-lg-8 printable-content scrollable-content">
+            <div class="row">
+            <img src="{{ asset('images/letter_head.png') }}" alt="">
+                <div class="card-body overflow-hidden p-3">
+                    {!! $document->content !!}
+                </div>
             </div>
+           
         </div>
         <div class="col-lg-4 ">
             <div class="card scrollable-content">
@@ -117,6 +143,24 @@
 
 
 <script>
+
+
+function printContent() {
+      const printArea = document.querySelector('.printable-content');
+      const originalContent = document.body.innerHTML;
+
+      // Replace the body content with the printable content
+      document.body.innerHTML = printArea.outerHTML;
+
+      // Trigger the print dialog
+      window.print();
+
+      // Restore the original content
+      document.body.innerHTML = originalContent;
+
+      // Rebind the script
+      window.location.reload();
+    }
 
 function loadComments() {
     const file_id = $('#doc-input').val();

@@ -11,6 +11,8 @@ use PhpOffice\PhpWord\IOFactory;
 use PhpOffice\PhpWord\TemplateProcessor;
 use Illuminate\Support\Facades\URL;
 use Dompdf\Dompdf;
+use Illuminate\Support\Facades\Storage;
+
 //use Barryvdh\DomPDF\Facade as PDF;
 use Barryvdh\DomPDF\Facade\Pdf as PDF;
 
@@ -23,6 +25,91 @@ use Barryvdh\DomPDF\Facade\Pdf as PDF;
 class FolderController extends Controller
 {
     //
+
+
+
+
+    
+
+
+    public function scan(Request $request)
+    {
+       // $directory = '/home/abass254/project/faya';
+        $directory = storage_path('app/public/FILE_SERVER'); // Replace 'FILE_SERVER' with your actual folder in the storage directory
+
+        // Check if the directory exists
+        if (!is_dir($directory)) {
+            return response()->json(['error' => 'Directory not found'], 404);
+        }
+
+        // Use the scanDirectory method in the same class
+        $data = $this->scanDirectory($directory);
+
+
+        foreach ($data as $data){
+            Folder::create([
+                'file' => '9999',
+                'meta_name' => $data['name'],
+                'meta_path' => $data['meta_path'],
+                'meta_type' => $data['meta_type'],
+                'ext' => $data['extension'],
+                'meta_primary' => $data['meta_primary']
+            ]);
+
+        
+        }
+        
+        return response()->json($data, 200, [], JSON_PRETTY_PRINT);
+
+
+        
+    }
+
+    public function scanDirectory($path, $parent = 'NUL')
+    {
+        $results = [];
+        
+        // Check if the path is a directory
+        if (is_dir($path)) {
+            $meta_type = 'folder';
+            $extension = 'N/A';
+            $name = basename($path);
+
+            // Add folder information
+            $results[] = [
+                'name' => $name,
+                'meta_primary' => $parent,
+                'meta_path' => $path,
+                'meta_type' => $meta_type,
+                'extension' => $extension
+            ];
+
+            // Open the directory and iterate through its contents
+            $items = scandir($path);
+            foreach ($items as $item) {
+                if ($item === '.' || $item === '..') continue; // Skip special directories
+
+                $itemPath = $path . DIRECTORY_SEPARATOR . $item;
+                $results = array_merge($results, $this->scanDirectory($itemPath, $name));
+            }
+        } else {
+            // Handle file case
+            $meta_type = 'file';
+            $extension = pathinfo($path, PATHINFO_EXTENSION);
+            $name = basename($path);
+
+            // Add file information
+            $results[] = [
+                'name' => $name,
+                'meta_primary' => $parent,
+                'meta_path' => $path,
+                'meta_type' => $meta_type,
+                'extension' => ".$extension"
+            ];
+        }
+
+        return $results;
+    }
 
 
     public function uploadFolder(Request $request)
@@ -164,6 +251,16 @@ class FolderController extends Controller
 
     public function viewFileAsPdf($id)
     {
+
+        $file = 'NEW_SERVER/test.txt';
+        $path = storage_path("app/public/".$file);
+        
+        if (!file_exists($path)) {
+            abort(408, 'File not found.');
+        }
+        return response()->file($path, [
+            'Content-Disposition' => 'inline'
+        ]);
         
         $folder = Folder::where('id', $id)->first();
         return view('folders.view_file');
