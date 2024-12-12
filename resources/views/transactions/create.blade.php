@@ -184,7 +184,7 @@
 											<strong class="text-primary"></strong></a><span class="text-primary text-capitalize">{{ $dt->file_no }} - {{ $dt->first_name .' '. $dt->last_name }}</span>
 											<br><a class="text=danger" href="javascript:void(0);">{{ $dt->client_phone_no }}</a>
 									</td>
-									<td class="py-2" style="width:1px;">{{$dt->amount }}</td>
+									<td class="py-2" style="width:1px;">{{$dt->tt }}</td>
 									<td class="py-2 d-flex">
 										<a href="" class="btn btn-danger btn-sm btn-block sharp m-1" data-bs-toggle="modal" data-bs-target="#financeModal">
 											<b>DISBURSMENT</b>
