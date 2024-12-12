@@ -2,131 +2,76 @@
 
 @section('content')
 <div class="container-fluid">
-	<div class="row page-titles">
-		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="javascript:void(0)">Shop</a></li>
-			<li class="breadcrumb-item active"><a href="javascript:void(0)">Invoice</a></li>
-		</ol>
-	</div>
-
-    <button onclick="printContent()">Print Content</button>
-	<div class="row printable-content">
-        <img src="{{ asset('images/letter_head.png') }}" alt="">
-		<div class="col-lg-12">
-
-			<div class="card mt-3">
-				<div class="card-header"> Invoice <strong>01/01/2023</strong> <span class="float-end">
-						<strong>Status:</strong> Pending</span> </div>
-				<div class="card-body">
-					<div class="row mb-5">
-						<div class="mt-4 col-xl-3 col-lg-3 col-md-6 col-sm-12">
-							<h6>From:</h6>
-							<div> <strong>{{ Auth::user()->name }}</strong> </div>
-							<div>Madalinskiego 8</div>
-							<div>71-101 Szczecin, Poland</div>
-							<div>Email: info@webz.com.pl</div>
-							<div>Phone: +48 444 666 3333</div>
-						</div>
-						<div class="mt-4 col-xl-3 col-lg-3 col-md-6 col-sm-12">
-							<h6>To:</h6>
-							<div> <strong>Bob Mart</strong> </div>
-							<div>Attn: Daniel Marek</div>
-							<div>43-190 Mikolow, Poland</div>
-							<div>Email: marek@daniel.com</div>
-							<div>Phone: +48 123 456 789</div>
-						</div>
-						<div class="mt-4 col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-lg-end justify-content-md-center justify-content-xs-start">
-							<div class="row align-items-center">
-								<div class="col-sm-9"> 
-									<div class="brand-logo mb-3">
-										<img class="logo-abbr me-2" width="50" src="public/images/logo.png" alt="">
-										<img class="logo-compact" width="110" src="public/images/logo-text.png" alt="">
-									</div>
-									<span>Please send exact amount: <strong class="d-block">0.15050000 BTC</strong>
-										<strong>1DonateWffyhwAjskoEwXt83pHZxhLTr8H</strong></span><br>
-									<small class="text-muted">Current exchange rate 1BTC = $6590 USD</small>
-								</div>
-								<div class="col-sm-3 mt-3"> <img src="public/images/qr.png" alt="" class="img-fluid width110"> </div>
-							</div>
-						</div>
-					</div>
-					<div class="table-responsive">
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th class="center">#</th>
-									<th>Item</th>
-									<th>Description</th>
-									<th class="right">Unit Cost</th>
-									<th class="center">Qty</th>
-									<th class="right">Total</th>
-								</tr>
-							</thead>
+<div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">OLD SERVER Files</a></li>
+        </ol>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card overflow-hidden">
+                <div class="card-body py-0 px-3">
+                    <div class="table-responsive">
+                        <table class="table table-sm mb-0 table-striped">
+                            <thead>
+                                <tr>
+                                    <th class=" pe-3">
+                                        <div class="form-check custom-checkbox checkbox-primary mx-2">
+                                            <input type="checkbox" class="form-check-input" id="checkAll">
+                                            <label class="form-check-label" for="checkAll"></label>
+                                        </div>
+                                    </th>
+                                    <th>File Name</th>
+                                    <th>File Type</th>
+                                    <th>File Path</th>
+                                    <th class=" pl-5" style="min-width: 200px;">Billing Address
+                                    </th>
+                                    <th>Joined</th>
+                                    <th class="">Actions</th>
+                                </tr>
+                            </thead>
 							<tbody>
-								<tr>
-									<td class="center">1</td>
-									<td class="left strong">Origin License</td>
-									<td class="left">Extended License</td>
-									<td class="right">$999,00</td>
-									<td class="center">1</td>
-									<td class="right">$999,00</td>
-								</tr>
-								<tr>
-									<td class="center">2</td>
-									<td class="left">Custom Services</td>
-									<td class="left">Instalation and Customization (cost per hour)</td>
-									<td class="right">$150,00</td>
-									<td class="center">20</td>
-									<td class="right">$3.000,00</td>
-								</tr>
-								<tr>
-									<td class="center">3</td>
-									<td class="left">Hosting</td>
-									<td class="left">1 year subcription</td>
-									<td class="right">$499,00</td>
-									<td class="center">1</td>
-									<td class="right">$499,00</td>
-								</tr>
-								<tr>
-									<td class="center">4</td>
-									<td class="left">Platinum Support</td>
-									<td class="left">1 year subcription 24/7</td>
-									<td class="right">$3.999,00</td>
-									<td class="center">1</td>
-									<td class="right">$3.999,00</td>
-								</tr>
+							@foreach($data as $dt)
+							<tr class="btn-reveal-trigger">
+								<td class="py-2">
+									<div class="form-check custom-checkbox checkbox-primary mx-2">
+										<input type="checkbox" class="form-check-input" id="checkbox1">
+										<label class="form-check-label" for="checkbox1"></label>
+									</div>
+								</td>
+								<td class="py-2">
+									<a href="javascript:void(0);">
+										<div class="media d-flex align-items-center">
+											<div class="avatar avatar-xl me-2">
+												<div class=""><img class="rounded-circle img-fluid"
+														src="{{ asset('images/avatar/5.png') }}" width="30" alt="">
+												</div>
+											</div>
+											<div class="media-body">
+												<h5 class="mb-0 fs--1">{{ $dt['name'] }}</h5>
+											</div>
+										</div>
+									</a>
+								</td>
+								<td class="py-2">{{ $dt['meta_type'] }}</td>
+								<td class="py-2">{{ $dt['meta_path'] }}</td>
+								<td class="py-2 pl-5">2392 Main Avenue, Penasauka</td>
+								<td class="py-2">30/03/2018</td>
+								<td class="py-2 text-right">
+									<div class="dropdown"><button class="btn btn-primary tp-btn-light sharp" type="button" data-bs-toggle="dropdown"><span class="fs--1"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg></span></button>
+										<div class="dropdown-menu dropdown-menu-end border py-0">
+											<div class="py-2"><a class="dropdown-item"  href="#!">Edit</a><a class="dropdown-item text-danger" href="#!">Delete</a></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							@endforeach
 							</tbody>
-						</table>
-					</div>
-					<div class="row">
-						<div class="col-lg-4 col-sm-5"> </div>
-						<div class="col-lg-4 col-sm-5 ms-auto">
-							<table class="table table-clear">
-								<tbody>
-									<tr>
-										<td class="left"><strong class="text-black">Subtotal</strong></td>
-										<td class="right">$8.497,00</td>
-									</tr>
-									<tr>
-										<td class="left"><strong class="text-black">Discount (20%)</strong></td>
-										<td class="right">$1,699,40</td>
-									</tr>
-									<tr>
-										<td class="left"><strong class="text-black">VAT (10%)</strong></td>
-										<td class="right">$679,76</td>
-									</tr>
-									<tr>
-										<td class="left"><strong class="text-black">Total</strong></td>
-										<td class="right"><strong class="text-black">$7.477,36</strong><br>
-											<strong class="text-black">0.15050000 BTC</strong></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

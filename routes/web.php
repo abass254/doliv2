@@ -9,6 +9,8 @@ use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\DocumentCommentController;
 use App\Http\Controllers\FolderCommentController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\FinanceController;
+
 
 
 
@@ -28,7 +30,7 @@ Route::post('/login', [AccountController::class, 'login'])->name('login');
 Route::middleware(['auth'])->group(function () {
 
 
-    Route::get('/scan-directory', [FolderController::class, 'scan']);
+    Route::get('/old_server_files', [FolderController::class, 'scan']);
 
    
     Route::get('/home', [AccountController::class, 'homePage'])->name('home'); 
@@ -69,7 +71,9 @@ Route::middleware(['auth'])->group(function () {
     Route::Resource('tasks', TaskController::class);
     Route::Resource('documents', DocumentController::class);
     Route::Resource('doc_comments', DocumentCommentController::class);
-    Route::Resource('file_comments', FolderCommentController::class);
+    Route::Resource('file_comments', FolderCommentController::class);    
+    Route::Resource('payment_transactions', FinanceController::class);
+
 
     Route::middleware(['auth', 'role:manager'])->group(function () {
         Route::post('/tasks/approve/{id}', [TaskController::class, 'approveSingle'])->name('tasks.approve.single');

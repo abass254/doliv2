@@ -14,6 +14,7 @@ use PhpOffice\PhpWord\IOFactory;
 use Dompdf\Dompdf;
 use DateTime;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
+use App\Models\Task;
 
 class FileController extends Controller
 {
@@ -302,8 +303,13 @@ class FileController extends Controller
             abort(404, 'File not found');
         }
 
+
+         $file_comments = Task::where('ts_file', $id)->get();
+
+        // return $file_comments;
+
         // return $data;
-        return view('cases.view', compact('data', 'contacts', 'finances', 'amount', 'files', 'documents'));
+        return view('cases.view', compact('data', 'contacts', 'finances', 'amount', 'files', 'documents', 'file_comments'));
 
     }
 

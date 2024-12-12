@@ -18,7 +18,7 @@
         <ul class="metismenu" id="menu">
             
             <li><a href="/home" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-381-home-2"></i>
+                    <i class="fa fa-home"></i>
                     <span class="nav-text">Home Page</span>
                 </a>
             </li>
@@ -46,7 +46,7 @@
                 </a>
             </li>
             @if(Auth::user()->role == "Manager")
-            <li class=""><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            <!-- <li class=""><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                 <i class="fa fa-tasks"></i>
                     <span class="nav-text">Tasks</span>
                 </a>
@@ -54,7 +54,17 @@
                     <li><a href="/pending_tasks">Pending Tasks</a></li>
                     <li><a href="/all_tasks">All Tasks</a></li>	
                 </ul>
+            </li> -->
+            <li class=""><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="fa fa-dollar"></i>
+                    <span class="nav-text">Finance</span>
+                </a>
+                <ul aria-expanded="false" class="mm-collapse">
+                    <li><a href="/payment_transactions/create">Add Payment Transactions</a></li>
+                    <li><a href="/payment_transactions">View All Transactions</a></li>	
+                </ul>
             </li>
+
             @endif
             <li><a href="/files" class="ai-icon" aria-expanded="false">
                     <i class="fa fa-clipboard"></i>
@@ -67,9 +77,9 @@
                 </a>
             </li>
            
-            <li><a href="/files_station" class="ai-icon" aria-expanded="false">
+            <li><a href="/old_server_files" class="ai-icon" aria-expanded="false">
                     <i class="fa fa-database"></i>
-                    <span class="nav-text">Files Station</span>
+                    <span class="nav-text">OLD_SERVER_FILES</span>
                 </a>
             </li>
             <li><a href="/settings" class="ai-icon" aria-expanded="false">

@@ -2,21 +2,11 @@
 
 @section('page-title', 'View File')
 
-<!-- <?php
+@php
 
+$fileP = asset('storage/uploads/'.$fileName); 
 
-//$fileP = asset('storage/uploads/'.$fileName); 
-
-// $path = $
-
-
-// $fileP = "C:\Users\Dell\Documents\ABASS AHMED RESUME.pdf";
-
-?>
-
-
-
-
+@endphp
 @section('content')
 <style>
     #docx-container {
@@ -94,31 +84,12 @@
     </div>
 
 
-    <!-- <ul>
-        <p>{{ $count }}</p>
-        @foreach ($fala as $file)
-            <li>{{ $file }}</li>
-        @endforeach
-    </ul> -->
         
-        
-    <!-- <ul>
-        <p>{{ $count }}</p>
-        @foreach ($fala as $file)
-            <li>{{ $file }}</li>
-        @endforeach
-    </ul> -->
-        
+        <p>{{ $fileP }}</p>
     <span class="d-flex">
         <div class="col-lg-8 scrollable-content">
             <div class="card-body overflow-hidden p-3">
-            <!-- <iframe src="" width="100%" height="600px" style="border: none;"></iframe> -->
-            <iframe 
-    src="http://docs.google.com/gview?url={{ Storage::url('mnt-dir/jamaicapassportapplicationform.pdf')}}&embedded=true" 
-    style="width:600px; height:500px;" 
-    frameborder="0">
-</iframe>
-            <iframe src="/" frameborder="0" style="width:100%;height:900px;"></iframe>
+            <iframe src="{{ $fileP }}" frameborder="0" style="width:100%;height:900px;"></iframe>
             </div>
         </div>
         <div class="col-lg-4 ">

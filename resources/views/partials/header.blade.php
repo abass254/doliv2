@@ -35,6 +35,11 @@
 
 </style>
 
+@php
+
+$files = \App\Models\File::all();
+
+@endphp
 
 <!-- Modal for Time Tracker -->
 <div class="modal" id="timeTrackerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
@@ -49,7 +54,12 @@
             <div class="modal-body">
                 <div>
                     <input type="text" hidden name="ts_user" value="{{ Auth::user()->id }}">
-                    <input type="text" hidden name="ts_file" value="999">
+                    <select name="ts_file" id="">
+                        @foreach($files as $fl)
+                            <option value="{{ $fl->id }}">{{ $fl->file_no }}</option>
+                        @endforeach
+                    </select>
+                    <!-- <input type="text" hidden name="ts_file" value="999"> -->
                     <input type="text" hidden name="ts_date" value="{{date('d-m-Y') }}">
                     <label for="elapsedMinutes">Elapsed Time (Minutes):</label>
                     <input type="text" name="ts_time" id="elapsedMinutes" class="form-control" readonly>
@@ -125,17 +135,7 @@
                             <svg id="icon-minimize" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minimize"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>
                         </a>
                     </li>
-                    <li class="nav-item dropdown notification_dropdown">
-                        <a class="nav-link bell bell-link" href="javascript:void(0);">
-                            <i class="flaticon-381-pad"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown notification_dropdown">
-                        <a class="nav-link  ai-icon" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
-                            <i class="flaticon-381-ring "></i>
-                            <div class="pulse-css"></div>
-                        </a>
-                    </li>
+                    
                     <li class="nav-item dropdown header-profile">
                         <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
                             <div class="header-info text-capitalize">

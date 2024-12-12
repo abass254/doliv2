@@ -28,7 +28,7 @@
                                     </li>
                                     <li class="nav-item" role="presentation"><a href="#file-contacts" data-bs-toggle="tab" class="nav-link" aria-selected="true" role="tab">File Contacts</a>
                                     </li>
-                                    @if(Auth::user()->role == "Accountant")
+                                    @if(Auth::user()->role == "Manager")
                                     <li class="nav-item" role="presentation"><a href="#finance" data-bs-toggle="tab" class="nav-link" aria-selected="true" role="tab">Finance</a>
                                     </li>
                                     @endif
@@ -399,7 +399,7 @@
                         </div>
                         <div class="card-footer d-flex justify-content-between">
                             <a class="btn btn-primary btn-sm" href="{{ route('files.edit', $data->id) }}">EDIT</a>
-                            <a class="btn btn-info btn-sm {{ $data->status == '2' ? 'disabled' : '' }}" href="/">CREATE DOCUMENT</a>
+                            <a class="btn btn-info btn-sm {{ $data->status == '2' ? 'disabled' : '' }}" href="/documents/create">CREATE DOCUMENT</a>
                             <!-- <a class="btn btn-primary btn-sm text-light" href="/documents/create">CREATE FILE</a> -->
                         </div>
 
@@ -408,59 +408,20 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header border-0 pb-0">
-                            <h4 class="card-title">Timeline</h4>
+                            <h4 class="card-title">File Activities</h4>
                         </div>
                         <div class="card-body p-0">
                             <div id="DZ_W_TimeLine" class="widget-timeline dz-scroll  my-4 px-4 height370">
                                 <ul class="timeline">
+                                    @foreach($file_comments as $fc)
                                     <li>
                                         <div class="timeline-badge primary"></div>
                                         <a class="timeline-panel text-muted" href="#">
-                                            <span>10 minutes ago</span>
-                                            <h6 class="mb-0">Youtube, a video-sharing website, goes live <strong class="text-primary">$500</strong>.</h6>
+                                            <span>{{ $fc->ts_date }}</span>
+                                            <h6 class="mb-0">{{ $fc->ts_activity }}</h6>
                                         </a>
                                     </li>
-                                    <li>
-                                        <div class="timeline-badge info">
-                                        </div>
-                                        <a class="timeline-panel text-muted" href="#">
-                                            <span>20 minutes ago</span>
-                                            <h6 class="mb-0">New order placed <strong class="text-info">#XF-2356.</strong></h6>
-                                            <p class="mb-0">Quisque a consequat ante Sit amet magna at volutapt...</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <div class="timeline-badge danger">
-                                        </div>
-                                        <a class="timeline-panel text-muted" href="#">
-                                            <span>30 minutes ago</span>
-                                            <h6 class="mb-0">john just buy your product <strong class="text-warning">Sell $250</strong></h6>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <div class="timeline-badge success">
-                                        </div>
-                                        <a class="timeline-panel text-muted" href="#">
-                                            <span>15 minutes ago</span>
-                                            <h6 class="mb-0">StumbleUpon is acquired by eBay. </h6>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <div class="timeline-badge warning">
-                                        </div>
-                                        <a class="timeline-panel text-muted" href="#">
-                                            <span>20 minutes ago</span>
-                                            <h6 class="mb-0">Mashable, a news website and blog, goes live.</h6>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <div class="timeline-badge dark">
-                                        </div>
-                                        <a class="timeline-panel text-muted" href="#">
-                                            <span>20 minutes ago</span>
-                                            <h6 class="mb-0">Mashable, a news website and blog, goes live.</h6>
-                                        </a>
-                                    </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -545,19 +506,7 @@
         </div>
     </div>
 
-    <div class="modal modal-lg fade" id="viewPDF" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="confirmModalLabel">Proof of payment</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <iframe id="pdfViewer" src="" width="100%" height="600px" frameborder="0"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
+  
 
 
     

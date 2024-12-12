@@ -24,17 +24,13 @@ use Barryvdh\DomPDF\Facade\Pdf as PDF;
 
 class FolderController extends Controller
 {
-    //
-
-
-
-
-    
 
 
     public function scan(Request $request)
     {
        // $directory = '/home/abass254/project/faya';
+
+        
         $directory = storage_path('app/public/FILE_SERVER'); // Replace 'FILE_SERVER' with your actual folder in the storage directory
 
         // Check if the directory exists
@@ -44,6 +40,8 @@ class FolderController extends Controller
 
         // Use the scanDirectory method in the same class
         $data = $this->scanDirectory($directory);
+
+        return view('inv', compact('data'));
 
 
         foreach ($data as $data){
@@ -251,46 +249,6 @@ class FolderController extends Controller
 
     public function viewFileAsPdf($id)
     {
-
-        $file = 'NEW_SERVER/test.txt';
-        $path = storage_path("app/public/".$file);
-        
-        if (!file_exists($path)) {
-            abort(408, 'File not found.');
-        }
-        return response()->file($path, [
-            'Content-Disposition' => 'inline'
-        ]);
-        
-        $folder = Folder::where('id', $id)->first();
-        return view('folders.view_file');
-        
-        if(empty($folder->meta_path)){
-           // return 'This is an uploaded file';
-            $filePath = $folder->file_path;
-        }
-
-        else{
-
-            $filePath = storage_path('app/public/uploads/'.$folder->folder_name);
-         //   return 'This is an imported file';
-        }
-
-        $filePath = '/mnt/dir/jamaicapassportapplicationform.pdf';
-
-      //  $path = "/mnt/dir/{$filename}";
-
-        if (!file_exists($filePath)) {
-            abort(404, 'File not found.');
-        }
-
-        $mimeType = mime_content_type($filePath);
-
-        return Response::file($filePath, [
-            'Content-Type' => $mimeType,
-            'Content-Disposition' => 'inline; filename="' . $filename . '"',
-        ]);
-        
 
         $document = Folder::where('id', $id)->first();
 
