@@ -12,6 +12,7 @@ use PhpOffice\PhpWord\TemplateProcessor;
 use Illuminate\Support\Facades\URL;
 use Dompdf\Dompdf;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File as Dir;
 
 //use Barryvdh\DomPDF\Facade as PDF;
 use Barryvdh\DomPDF\Facade\Pdf as PDF;
@@ -24,6 +25,69 @@ use Barryvdh\DomPDF\Facade\Pdf as PDF;
 
 class FolderController extends Controller
 {
+
+
+
+    public function fileStructure(Request $request)
+    {
+        $path = $request->get('path', '/');
+        $search = $request->get('search', null);
+
+        $fullPath = storage_path('app/public/FILE_SERVER') . $path;
+
+        if (!Dir::exists($fullPath) || !Dir::isDirectory($fullPath)) {
+            abort(404, 'Directory not found.');
+        }
+
+        // Fetch current folder's directories and files
+        $folders = Dir::directories($fullPath);
+        $files = Dir::files($fullPath);
+
+        if ($search) {
+            // Filter current directory folders and files
+            $folders = array_filter($folders, function ($folder) use ($search) {
+                return stripos(basename($folder), $search) !== false;
+            });
+
+            $files = array_filter($files, function ($file) use ($search) {
+                return stripos(basename($file), $search) !== false;
+            });
+
+            // Fetch subdirectories manually
+            $subDirectories = $this->getAllDirectories($fullPath);
+            foreach ($subDirectories as $subDirectory) {
+                $subFolders = Dir::directories($subDirectory);
+                $subFiles = Dir::files($subDirectory);
+
+                foreach ($subFolders as $folder) {
+                    if (stripos(basename($folder), $search) !== false) {
+                        $folders[] = $folder;
+                    }
+                }
+
+                foreach ($subFiles as $file) {
+                    if (stripos(basename($file), $search) !== false) {
+                        $files[] = $file;
+                    }
+                }
+            }
+        }
+
+        return view('file_structure', compact('folders', 'files', 'path', 'search'));
+    }
+
+    private function getAllDirectories($path)
+    {
+        $directories = [];
+        $subDirectories = Dir::directories($path);
+
+        foreach ($subDirectories as $directory) {
+            $directories[] = $directory;
+            $directories = array_merge($directories, $this->getAllDirectories($directory));
+        }
+
+        return $directories;
+    }
 
 
     public function scan(Request $request)

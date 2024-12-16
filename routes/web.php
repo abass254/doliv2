@@ -31,6 +31,7 @@ Route::middleware(['auth'])->group(function () {
 
 
     Route::get('/old_server_files', [FolderController::class, 'scan']);
+    Route::get('/file_structure', [FolderController::class, 'fileStructure'])->name('file_structure');
 
    
     Route::get('/home', [AccountController::class, 'homePage'])->name('home'); 

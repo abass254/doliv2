@@ -55,15 +55,20 @@
                     <li><a href="/all_tasks">All Tasks</a></li>	
                 </ul>
             </li> -->
-            <li class=""><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                <i class="fa fa-dollar"></i>
+            <li><a href="#" class="ai-icon" aria-expanded="false">
+                    <i class="fa fa-dollar"></i>
                     <span class="nav-text">Finance</span>
+                </a>
+            </li>
+            <!-- <li class=""><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="fa fa-dollar"></i>
+                    <span class="nav-text">Finance Manager</span>
                 </a>
                 <ul aria-expanded="false" class="mm-collapse">
                     <li><a href="/payment_transactions/create">Add Payment Transactions</a></li>
                     <li><a href="/payment_transactions">View All Transactions</a></li>	
                 </ul>
-            </li>
+            </li> -->
 
             @endif
             <li><a href="/files" class="ai-icon" aria-expanded="false">
@@ -77,9 +82,9 @@
                 </a>
             </li>
            
-            <li><a href="/old_server_files" class="ai-icon" aria-expanded="false">
+            <li><a href="/file_structure" class="ai-icon" aria-expanded="false">
                     <i class="fa fa-database"></i>
-                    <span class="nav-text">OLD_SERVER_FILES</span>
+                    <span class="nav-text">Old Server Files</span>
                 </a>
             </li>
             <li><a href="/settings" class="ai-icon" aria-expanded="false">

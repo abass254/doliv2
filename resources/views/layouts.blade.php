@@ -11,11 +11,14 @@
     <link href="{{ asset('vendor/chartist/css/chartist.min.css') }}" rel="stylesheet">
 
 
-    <link href="{{ asset('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800') }}" rel="stylesheet">
+    <!-- <link href="{{ asset('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800') }}" rel="stylesheet">
     <link href="{{ asset('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700') }}" rel="stylesheet">
     <link href="{{ asset('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700') }}" rel="stylesheet">
     <link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:400,500,700') }}" rel="stylesheet">
-    <link href="{{ asset('https://fonts.googleapis.com/css?family=Nunito:400,600,700') }}" rel="stylesheet">
+    <link href="{{ asset('https://fonts.googleapis.com/css?family=Nunito:400,600,700') }}" rel="stylesheet"> -->
+
+
+
     <link href="{{ asset('icons/helveticaNeue/css/helveticaNeue.css') }}" rel="stylesheet">
     <!-- <link href="{{ asset('icons/fontawesome/css/all.min.css') }}" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
