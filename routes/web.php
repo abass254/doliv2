@@ -19,6 +19,11 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/register', function () {
+    return view('registration');
+});
+
+
 Route::post('/login', [AccountController::class, 'login'])->name('login');
 
 
@@ -33,8 +38,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/old_server_files', [FolderController::class, 'scan']);
     Route::get('/file_structure', [FolderController::class, 'fileStructure'])->name('file_structure');
 
-   
-    Route::get('/home', [AccountController::class, 'homePage'])->name('home'); 
+    Route::get('/file_structure/{folder}/{file}', function ($folder, $file) {
+        return view('file_view', compact('folder', 'file'));
+    })->name('file_view');
+
+
+    Route::get('/home', [AccountController::class, 'homePage'])->name('home');
     Route::post('/logout', [AccountController::class, 'logout'])->name('logout');
     Route::post('/change-password', [AccountController::class, 'changePassword'])->name('password.update');
     Route::get('/', function () {
@@ -72,7 +81,7 @@ Route::middleware(['auth'])->group(function () {
     Route::Resource('tasks', TaskController::class);
     Route::Resource('documents', DocumentController::class);
     Route::Resource('doc_comments', DocumentCommentController::class);
-    Route::Resource('file_comments', FolderCommentController::class);    
+    Route::Resource('file_comments', FolderCommentController::class);
     Route::Resource('payment_transactions', FinanceController::class);
 
 
@@ -81,7 +90,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/tasks/approve-bulk', [TaskController::class, 'approveBulk'])->name('tasks.approve.bulk');
     });
 
-    
+
     Route::get('/uploaded_file/{id}', [FolderController::class, 'viewFileAsPdf'])->name('view_uploaded_file');
 
 

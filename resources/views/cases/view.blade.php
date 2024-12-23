@@ -9,8 +9,8 @@
 			<li class="breadcrumb-item"><a href="/">Home Page</a></li>
 		</ol>
 	</div>
-    
-	
+
+
     <div class="row">
         <div class="col-xl-9">
             <div class="row">
@@ -21,7 +21,7 @@
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li class="nav-item" role="presentation"><a href="#client-info" data-bs-toggle="tab" class="nav-link active" aria-selected="true" role="tab">Client Info</a>
                                     </li>
-                                    
+
                                     <li class="nav-item" role="presentation"><a href="#medical-info" data-bs-toggle="tab" class="nav-link show" aria-selected="false" role="tab" tabindex="-1">Medical Info</a>
                                     </li>
                                     <li class="nav-item" role="presentation"><a href="#insurance-info" data-bs-toggle="tab" class="nav-link" aria-selected="false" role="tab" tabindex="-1">Insurance Info</a>
@@ -98,7 +98,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-6">    
+                                            <div class="col-6">
                                                 <div class="row mb-2">
                                                     <div class="col-sm-5 col-5">
                                                         <h5 class="f-w-500">Assessment Center<span class="pull-end">:</span></h5>
@@ -212,7 +212,7 @@
                                             </div>
                                         </div>
                                         <br>
-                                        
+
                                     </div>
                                     <div id="file-contacts" class="tab-pane fade" role="tabpanel">
                                         <div class="col-lg-12">
@@ -224,8 +224,8 @@
                                                                 <button style="float:right;" id="approve-selected" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#confirmModal">
                                                                     ADD CONTACT
                                                                 </button>
-                                                            </th>   
-                                                            
+                                                            </th>
+
                                                             </tr>
                                                             <tr>
                                                                 <th>#</th>
@@ -257,7 +257,7 @@
                                     </div>
                                     <div id="finance" class="tab-pane fade" role="tabpanel">
                                         <div class="col-lg-12">
-                                            <div class="card"> 
+                                            <div class="card">
                                                 <div class="d-flex">
                                                     <button class="btn m-3 btn-success btn-sm ml-auto" data-bs-toggle="modal" data-bs-target="#financeModal">
                                                         ADD FINANCE INFORMATION
@@ -268,9 +268,9 @@
                                                     <table class="table table-responsive table-striped table- display table-sm mb-0">
                                                         <thead>
                                                             <tr><th colspan="6" >
-                                                            
-                                                            </th>   
-                                                            
+
+                                                            </th>
+
                                                             </tr>
                                                             <tr>
                                                                 <th>#</th>
@@ -314,6 +314,10 @@
                 <div class="card h-auto">
                     <div class="card-header">
                         <h4 class="card-title"><b><i class="la la-database me-2"></i>File Station</b></h4>
+                        <!-- <button class="btn btn-primary"></button> -->
+                         <span class></span>
+                        <a class="btn m-3 btn-primary btn-sm ml-auto" data-bs-toggle="modal" data-bs-target="#fileModal">UPLOAD FILE</a>
+                        <a class="btn btn-sm btn-info" href="/documents/create">CREATE A DOCUMENT</a>
                     </div>
                     <div class="card-body">
                         <!-- Nav tabs -->
@@ -339,7 +343,7 @@
                                                     <div class="new-arrival-content text-center mt-3">
                                                         <p class="text-capitalize text-truncate" title="{{ $fl->folder_name }}">{{ $fl->folder_name }}</p>
                                                         <span class="price">
-                                                            <a href=" {{ route('view_uploaded_file', $fl->id) }}" 
+                                                            <a href=" {{ route('view_uploaded_file', $fl->id) }}"
                                                             class="btn btn-sm btn-block btn-danger">VIEW</a>
                                                         </span>
                                                     </div>
@@ -347,7 +351,7 @@
                                             </div>
                                             @endforeach
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="created-files" role="tabpanel">
@@ -362,7 +366,7 @@
                                                     <div class="new-arrival-content text-center mt-3">
                                                         <p class="text-capitalize text-truncate" title="{{ $fl->title }}">{{ $fl->title }}</p>
                                                         <span class="price">
-                                                            <a href="/documents/{{ $fl->id }}" 
+                                                            <a href="/documents/{{ $fl->id }}"
                                                             class="btn btn-sm btn-block btn-primary">VIEW</a>
                                                         </span>
                                                     </div>
@@ -372,13 +376,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
 
@@ -428,9 +432,9 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
-        
+
 	</div>
 
 
@@ -495,7 +499,7 @@
                                 <input required name="fn_filename" id="fn_filename" type="file" class="form-control form-control-sm">
                             </div>
                         </div>
-                        
+
                         <input type="hidden" name="fn_file" id="fn_file" value="{{ $data->id }}">
                     </div>
                     <div class="modal-footer">
@@ -506,10 +510,35 @@
         </div>
     </div>
 
-  
+
+    <div class="modal fade" id="fileModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmModalLabel">Upload Files</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="POST" action="{{ route('upload-files') }}" enctype="multipart/form-data">
+                    @csrf
+                    <input hidden required type="text" id="file" name="file" value="{{ $data->id }}">
+                    <input hidden required type="text" id="folder_status" name="folder_status" value="1">
+                    <input hidden required type="text" id="primary_folder" name="primary_folder" value="0">
+                    <div class="input-group">
+                        <input multiple type="file" id="folder_name" name="folder_name[]" class="form-control form-control-sm" accept=".pdf,.docx" placeholder="Create New Folder" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary btn-sm" id="" type="submit">UPLOAD</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
-    
+
+
+
+
 
     <script>
        document.addEventListener('DOMContentLoaded', function () {

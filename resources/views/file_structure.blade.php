@@ -33,16 +33,28 @@ $file = App\Models\File::all();
 }
 
 .timeline-panel {
-    padding: 10px; /* Reduce padding */
+    padding: 1px; /* Reduce padding */
     display: flex; /* Flexbox for alignment */
     align-items: center; /* Vertical centering */
     justify-content: center; /* Horizontal centering */
+    margin-bottom: 1px;
+    border-radius: 25px;
 }
 
 .timeline-panel h4 {
     margin: 0; /* Remove default margins for h4 */
+    font-size: 18px;
+    font-style: 'Roboto';
+    font-weight: 20px;
+    color:black;
     text-align: left; /* Center the text */
 }
+
+.timeline-panel h4:hover {
+  color: black;
+  font-size: 20px;
+}
+
 
 </style>
 
@@ -93,7 +105,7 @@ $file = App\Models\File::all();
                 <div class="col-md-12">
                 <div class="timeline-panel bg-white p-2 mb-4 d-flex align-items-center" style="height: auto;">
                     <div class="media-body text-center w-100">
-                        <h4 class="mb-0"><span class="icon m-2">📁</span><a href="{{ route('file_structure', ['path' => $path . '/' . basename($folder)]) }}">{{ basename($folder) }}</a></h4>
+                        <h4 class="mb-0"><span class="icon m-2">📁</span><a class="text-capitalize" href="{{ route('file_structure', ['path' => $path . '/' . basename($folder)]) }}">{{ basename($folder) }}</a></h4>
                     </div>
                 </div>
                 </div>

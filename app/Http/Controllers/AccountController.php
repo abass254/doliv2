@@ -19,8 +19,8 @@ class AccountController extends Controller
 
         $data = User::all();
         return view('users.list', compact('data'));
-        
-       
+
+
     }
 
     /**
@@ -39,19 +39,20 @@ class AccountController extends Controller
     public function store(Request $request)
     {
         //
-        
+
         $request->validate([
             'name' => 'required|string|max:255',
+            'password' => 'required',
             'email' => 'required|email|unique:users,email',
             'role' => 'required',
-            'phone' => 'required'
+            'phone' => 'required',
         ]);
 
-        
-        $user = User::create([ 
+
+        $user = User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
-            'password' => Hash::make($request->input('phone')),
+            'password' => Hash::make($request->input('password') ?? $request->input('phone')),
             'role'=> $request->input('role'),
             'gender'=> $request->input('gender'),
             'photo'=> $request->input('photo'),
@@ -68,7 +69,7 @@ class AccountController extends Controller
     public function show(string $id)
     {
         //
-        
+
     }
 
     /**
@@ -126,7 +127,7 @@ class AccountController extends Controller
             return $ts;
         });
 
-      
+
 
        // return $tasks;
         return view('home', compact('tasks'));

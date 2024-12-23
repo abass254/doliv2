@@ -31,13 +31,13 @@ class FileController extends Controller
         ]);
 
 
-        
-        $user = FileContact::create([ 
+
+        $user = FileContact::create([
             'fl_title' => $request->input('fl_title'),
             'fl_contact' => $request->input('fl_contact'),
             'fl_file'=> $request->input('fl_file'),
         ]);
-        
+
 
         return redirect()->back()->with('message', 'User successfully saved!');
 
@@ -56,7 +56,7 @@ class FileController extends Controller
         //return $request->all();
 
         $file = $request->file('fn_filename');
-       
+
         if (!$file) {
             return response()->json([
                 'success' => false,
@@ -101,9 +101,9 @@ class FileController extends Controller
         else {
             $file->storeAs('finance', $save_name, 'public');
 
-        
-            
-        }   $user = FileFinance::create([ 
+
+
+        }   $user = FileFinance::create([
                 'fn_title' => $request->input('fn_title'),
                 'fn_filename' => $save_name,
                 'fn_file' => $request->input('fn_file'),
@@ -111,7 +111,7 @@ class FileController extends Controller
                 'fn_type'=> $request->input('fn_type'),
                 'fn_amount'=> $request->input('fn_type') == '0' ? '-'.$request->input('fn_amount') : $request->input('fn_amount'),
             ]);
-        
+
         return redirect()->back()->with('message', 'User successfully saved!');
 
     }
@@ -147,7 +147,9 @@ class FileController extends Controller
 
         //return $request->all();
 
-        File::createFile($request->all());
+        $file = File::createFile($request->all());
+
+        return redirect("/files/".$file->id);
 
         return redirect()->back()->with('message', 'Data successfully saved!');
 
@@ -217,7 +219,7 @@ class FileController extends Controller
 
 
     public function index()
-    { 
+    {
         $data = File::all();
 
         // $f = [];
@@ -227,7 +229,7 @@ class FileController extends Controller
         //         'id' => $dt->id,
         //         'date_of_loss' => $dt->date_of_loss,
         //     ];
-        //    // $dt->id 
+        //    // $dt->id
         // }
 
 
@@ -246,7 +248,7 @@ class FileController extends Controller
         });
 
        // return $data;
-    
+
         return view('cases.list', compact('data'));
     }
 
@@ -297,7 +299,7 @@ class FileController extends Controller
       //  return $amount;
 
       //  return $finances;
-       
+
 
         if (!$data) {
             abort(404, 'File not found');
@@ -324,7 +326,7 @@ class FileController extends Controller
         return $data;
     }
 
-    
+
 
 
 }

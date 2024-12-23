@@ -4,7 +4,7 @@
 
 @php
 
-$fileP = asset('storage/uploads/'.$fileName); 
+$fileP = asset('storage/uploads/'.$fileName);
 
 @endphp
 @section('content')
@@ -34,7 +34,7 @@ $fileP = asset('storage/uploads/'.$fileName);
     .type_msg .form-control {
         padding: 10px 0;
         height: 50px;
-        border: 0; 
+        border: 0;
     }
     .type_msg .btn {
         font-size: 18px;
@@ -42,7 +42,7 @@ $fileP = asset('storage/uploads/'.$fileName);
         width: 38px;
         height: 38px;
         padding: 0;
-        margin-top: 6px; 
+        margin-top: 6px;
     }
     .chat-list-header {
     justify-content: space-between;
@@ -59,17 +59,17 @@ $fileP = asset('storage/uploads/'.$fileName);
       border-radius: 6px;
       line-height: 30px;
       display: block; }
-      [data-theme-version="dark"] 
+      [data-theme-version="dark"]
       .chat-list-header a {
         background: rgba(118, 0, 159, 0.2); }
-        [data-theme-version="dark"] 
+        [data-theme-version="dark"]
         .chat-list-header a svg g [fill] {
           fill: #fff; }
 
-    
 
 
-    
+
+
 
 
 </style>
@@ -78,18 +78,15 @@ $fileP = asset('storage/uploads/'.$fileName);
         <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item text-uppercase">
                 <strong class="text-primary"></strong>
-                <p></p>
+                <p>{{ $fileName }}</p>
             </li>
         </ol>
     </div>
 
-
-        
-        <p>{{ $fileP }}</p>
     <span class="d-flex">
         <div class="col-lg-8 scrollable-content">
             <div class="card-body overflow-hidden p-3">
-            <iframe src="{{ $fileP }}" frameborder="0" style="width:100%;height:900px;"></iframe>
+            <iframe src="{{ $fileP }}" frameborder="0" style="width:100%;height:600px;"></iframe>
             </div>
         </div>
         <div class="col-lg-4 ">
@@ -100,7 +97,7 @@ $fileP = asset('storage/uploads/'.$fileName);
                 <div class="card-body">
                     <div class="widget-timeline-icon widget-timeline-icon-sm">
                         <ul id="comments-list" class="timeline  dz-scroll height700">
-                        
+
                                 <!-- Comments will be dynamically loaded here -->
                         </ul>
                     </div>
@@ -120,15 +117,15 @@ $fileP = asset('storage/uploads/'.$fileName);
                 </div>
             </div>
         </div>
-        
+
     </span>
-    
-    
+
+
 </div>
 
 <!-- Include jQuery from a CDN -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   
+
 <!-- <script src="https://cdn.jsdelivr.net/npm/docx-preview/dist/docx-preview.min.js"></script> -->
 
 <!-- <script src="https://unpkg.com/jszip/dist/jszip.min.js"></script> -->
@@ -166,11 +163,11 @@ $fileP = asset('storage/uploads/'.$fileName);
         //             const container = document.getElementById('docx-container');
         //             container.innerHTML = '<p>Unable to load the document. Please check the file URL.</p>';
         //         });
-        // } 
+        // }
         // else if (fileExtension === 'pdf') {
         //     // Fetch and render the .pdf file using PDF.js
         //     const container = document.getElementById('pdf-container');
-            
+
         //     pdfjsLib.getDocument(filePath).promise.then(function (pdfDoc_) {
         //         const pdfDoc = pdfDoc_;
         //         const pageNum = 1; // Display the first page
@@ -178,7 +175,7 @@ $fileP = asset('storage/uploads/'.$fileName);
         //         // Prepare the container for rendering
         //         const scale = 1.5;
         //         const viewport = pdfDoc.getPage(pageNum).getViewport({ scale: scale });
-                
+
         //         // Create a canvas element to render the page
         //         const canvas = document.createElement('canvas');
         //         const context = canvas.getContext('2d');
@@ -199,7 +196,7 @@ $fileP = asset('storage/uploads/'.$fileName);
         //         container.innerHTML = '<p>Unable to load the document. Please try again later.</p>';
         //     });
         // }
-    
+
     // const docxPath = "";
     //     console.log(docxPath);
 
@@ -225,13 +222,13 @@ $fileP = asset('storage/uploads/'.$fileName);
     //         const container = document.getElementById('docx-container');
     //         container.innerHTML = '<p>Unable to load the document. Please check the file URL.</p>';
     //     });
-    
 
-    
-    
+
+
+
     function loadComments() {
     const file_id = $('#folder-input').val();
-    $.ajax({    
+    $.ajax({
         url: `/file_comments/${file_id}`,
         method: 'GET',
         success: function (data) {
@@ -279,7 +276,7 @@ $fileP = asset('storage/uploads/'.$fileName);
                 method: 'POST',
                 data: {
                     comment: comment,
-                    folder: folder, 
+                    folder: folder,
                     status: status,
                     _token: $('meta[name="csrf-token"]').attr('content') // Include CSRF token
                 },
@@ -294,7 +291,7 @@ $fileP = asset('storage/uploads/'.$fileName);
             });
         });
 
-        
+
 
     });
 
